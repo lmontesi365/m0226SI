@@ -1,8 +1,5 @@
 site_name: M0226 - Seguretat Informàtica
-site_description: Apunts organitzats per RA
-
 theme:
   name: material
-
 nav:
   - Inicio: index.md
