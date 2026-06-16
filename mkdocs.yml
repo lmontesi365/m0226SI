@@ -7,5 +7,7 @@ nav:
   - Inicio: index.md
   - "RA1: Seguretat Passiva": 
     - "Conceptes Generals": ra1/conceptos.md
-  - "RA2: Seguretat Activa":
+  - "RA2: Emmagatzament de la informació":
     - "Criptografia": ra2/cripto.md
+  - "RA3: Seguretat Activa":
+    - "politicas de Seguretat": ra3/politicas.md
