@@ -1,5 +1,11 @@
 site_name: M0226 - Seguretat Informàtica
 theme:
   name: material
+  language: ca # Configura la web en català
+
 nav:
   - Inicio: index.md
+  - "RA1: Seguretat Passiva": 
+    - "Conceptes Generals": ra1/conceptos.md
+  - "RA2: Seguretat Activa":
+    - "Criptografia": ra2/cripto.md
