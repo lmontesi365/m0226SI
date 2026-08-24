@@ -14,3 +14,6 @@ nav:
     - "Criptografia": ra2/cripto.md
   - "RA3: Seguretat Activa":
     - "politiques de Seguretat": ra3/politicas.md
+    - "Acl Windows": ra3/acl_windows.md
+    - "Autenticació": ra3/autenticacio.md
+    - "Contrasenyes": ra3/contrasenyes.md
