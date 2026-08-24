@@ -7,6 +7,8 @@ nav:
   - Inicio: index.md
   - "RA1: Seguretat Passiva": 
     - "Conceptes Generals": ra1/conceptos.md
+    - "Seguretat Física i Lògica": ra1/S_fisca-Logica.md
+    - "Centre de Processament de Dades (CPD)": ra1/CPD.md
   - "RA2: Emmagatzament de la informació":
     - "Criptografia": ra2/cripto.md
   - "RA3: Seguretat Activa":
