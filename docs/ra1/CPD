@@ -1,0 +1,61 @@
+Criteris d'ubicació d'una sala de servidors
+1. Elecció de l’edifici i la zona geogràfica
+Evitar zones de risc natural: No ubicar la sala en àrees propenses a inundacions (rius, planes al·luvials), terratrèmols, huracans o qualsevol desastre natural recurrent a la regió.
+
+
+Seguretat de l’entorn: Prioritzar edificis en zones amb baixos índexs de criminalitat per reduir el risc de robatoris o vandalisme.
+
+
+Proximitat a riscos externs: Allunyar-se d’instal·lacions perilloses (benzineres, fàbriques químiques, magatzems de combustibles, zones industrials amb risc d’explosió o incendi).
+
+
+Accés a subministraments: Escollir ubicacions amb accés fiable a electricitat, preferiblement amb redundància des de més d’una subestació. Verificar bona cobertura de proveïdors d’internet d’alta velocitat.
+
+
+Accessibilitat per al personal autoritzat: Ha d’estar disponible les 24/7 per a tècnics i serveis d’emergència (bombers, policia).
+
+
+
+2. Ubicació dins del mateix edifici
+Evitar plantes crítiques:
+
+
+Soterranis i plantes baixes → risc d’inundació i humitat.
+
+
+Últimes plantes → risc de filtracions i major càrrega tèrmica.
+
+
+Ubicació discreta:
+
+
+Sala interior, sense finestres a l’exterior.
+
+
+Allunyada de recepcions, cafeteries i passadissos principals.
+
+
+No senyalitzar com a “Sala de Servidors” → usar noms neutres (ex. Sala Tècnica 01).
+
+Accés Fàcil per carregar -> Si els equips són molt pesats (racks, SAI/UPS), és important que la sala estigui en una planta on es pugui arribar amb un muntacàrregues o un ascensor gran i fort.
+
+Allunyada de fonts de perill intern:
+
+
+Vibracions → evitar proximitat a ascensors, molls de càrrega, sales de maquinària.
+
+
+Aigua i desaigües → no col·locar sota lavabos, cuines o canonades.
+
+
+Interferències electromagnètiques → lluny de transformadors, antenes o motors elèctrics de gran mida.
+
+
+Consideracions estructurals:
+
+
+Capacitat de càrrega del Sòl: el forjat ha de suportar el pes concentrat de racks, SAI/UPS, climatització.
+
+
+Alçada suficient: per a sòl tècnic, cablejat, safates, conductes de climatització i un flux d’aire adequat.
+
