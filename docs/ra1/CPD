@@ -1,61 +1,333 @@
-Criteris d'ubicació d'una sala de servidors
-1. Elecció de l’edifici i la zona geogràfica
-Evitar zones de risc natural: No ubicar la sala en àrees propenses a inundacions (rius, planes al·luvials), terratrèmols, huracans o qualsevol desastre natural recurrent a la regió.
+# Centre de Processament de Dades (CPD) - Criteris d'Ubicació i Disseny
 
+## Introducció
+Un Centre de Processament de Dades (CPD) o Data Center és la instal·lació física que allotja els servidors, dispositius de xarxa i sistemes de suport necessaris per a l'operació de sistemes informàtics d'una organització. La seva ubicació i disseny és **crítica per a la seguretat, disponibilitat i rendiment**.
 
-Seguretat de l’entorn: Prioritzar edificis en zones amb baixos índexs de criminalitat per reduir el risc de robatoris o vandalisme.
+---
 
+## 📍 Part 1: Elecció de l'Edifici i la Zona Geogràfica
 
-Proximitat a riscos externs: Allunyar-se d’instal·lacions perilloses (benzineres, fàbriques químiques, magatzems de combustibles, zones industrials amb risc d’explosió o incendi).
+### 1.1 Evitar Zones de Risc Natural
 
+**Problemes:**
+- **Inundacions**: Zones prop de rius, plans al·luvials, àrees baixes propendes a acumular aigua
+- **Terratrèmols**: Regions sismicament actives
+- **Huracans/Tempestes**: Zones costaneres amb risc de vents violents
+- **Nevades extremes**: Zones de muntanya amb risc d'allissos
 
-Accés a subministraments: Escollir ubicacions amb accés fiable a electricitat, preferiblement amb redundància des de més d’una subestació. Verificar bona cobertura de proveïdors d’internet d’alta velocitat.
+**Recomanacions:**
+- 📊 **Estudiar l'historial meteorològic** dels últims 20-30 anys
+- 🗺️ **Consultar mapes de riscos naturals** de l'Agència de Protecció Civil
+- 📋 **Verificar plans urbanístics** per assegurar que la zona no serà inundable
+- 🏘️ **Evitar zones de construcció recent** (sòl potencialment inestable)
 
+### 1.2 Seguretat de l'Entorn (Criminalitat)
 
-Accessibilitat per al personal autoritzat: Ha d’estar disponible les 24/7 per a tècnics i serveis d’emergència (bombers, policia).
+**Problemes:**
+- **Robatoris** de dispositius i equipament
+- **Vandalisme** i sabotatge
+- **Intents de trencament** de la seguretat
 
+**Recomanacions:**
+- 📊 **Investigar índexs de criminalitat** del barri
+- 👮 **Proximitat a commissaria de policia** (idealment < 5 km)
+- 🏢 **Zona amb presència empresarial** (no sola, millor amb altres negocis)
+- 🚔 **Patrulles de seguretat** a la zona
 
+### 1.3 Proximitat a Instal·lacions Perilloses
 
-2. Ubicació dins del mateix edifici
-Evitar plantes crítiques:
+**Amenaces Externes:**
+| Instal·lació | Risc | Distancia Mínima Recomanada |
+|-----------|------|---------------------------|
+| Benzineres | Explosió, incendi | > 500 metres |
+| Fàbriques químiques | Toxicitat, explosió, radiació | > 1 km |
+| Magatzems de combustibles | Incendi, explosió | > 1 km |
+| Zones industrials | Vibració, contaminació | > 500 metres |
+| Aeroports | Crash aeri, radiació | > 10 km |
+| Línies ferroviàries | Vibració, descarrils | > 300 metres |
+| Centrals elèctriques | Radiació, EMF | > 500 metres |
 
+**Recomanacions:**
+- 📍 **Ubicar en zona comercial o residencial tranquila**
+- 🗺️ **Consultar plànols urbans** per identificar instal·lacions properes
+- 📞 **Contactar amb autoritats** per confirmar seguretat
 
-Soterranis i plantes baixes → risc d’inundació i humitat.
+### 1.4 Accés a Subministraments Crítics
 
+#### Electricitat
+- **Redundancia**: Connexió a múltiples subestacions elèctriques (idealment 2-3 independents)
+- **Tensió**: Verificar estabilitat de voltatge
+- **Capacitat**: Suministre suficient per a la demanda actual + creixement
+- **Qualitat**: Baixa taxa de talls (< 99.5% interrupcions anuals)
 
-Últimes plantes → risc de filtracions i major càrrega tèrmica.
+#### Internet
+- **Múltiples operadores** (fibra òptica òptim)
+- **Ample de banda** > 1 Gbps (recomendable 10 Gbps)
+- **SLA (Service Level Agreement)** amb % de disponibilitat garantit (99.9% mínimo)
+- **Cobertura geogràfica** de proveïdors
 
+#### Aigua (per climatització i extinció d'incendis)
+- **Accés fiable** a abasteciment d'aigua
+- **Qualitat** de l'aigua (baixa salinitat)
+- **Pressió** suficient (> 2 bar)
 
-Ubicació discreta:
+### 1.5 Accessibilitat per al Personal i Emergències
 
+**Requisits 24/7:**
+- ✅ Accés les 24 hores del dia, 7 dies per setmana
+- ✅ Disponibilitat de tècnics TI en < 30 minuts
+- ✅ Accés immediat per a bombers i policia
+- ✅ Via d'accés sense peatges ni restriccions de trànsit
+- ✅ Aparcament suficient per a vehicles d'emergència
 
-Sala interior, sense finestres a l’exterior.
+**Infraestructura:**
+- 🚗 Carreteres principals propers (no callejons)
+- 🚌 Accés a transports públics
+- ⛽ Gasolineres i altres serveis propers
 
+---
 
-Allunyada de recepcions, cafeteries i passadissos principals.
+## 🏢 Part 2: Ubicació dins del Mateix Edifici
 
+### 2.1 Planta on Ubicar la Sala
 
-No senyalitzar com a “Sala de Servidors” → usar noms neutres (ex. Sala Tècnica 01).
+#### ❌ Plantes a Evitar
 
-Accés Fàcil per carregar -> Si els equips són molt pesats (racks, SAI/UPS), és important que la sala estigui en una planta on es pugui arribar amb un muntacàrregues o un ascensor gran i fort.
+**Soterranis:**
+- 💧 Alt risc d'inundació
+- 💨 Acumulació de humitat
+- 🦊 Accés més fàcil de vulnerar
+- 🚪 Menys sortides d'emergència
 
-Allunyada de fonts de perill intern:
+**Plantes Baixes:**
+- 💧 Inundacions per aiguals
+- 🏃 Accessibilitat a vianants
+- 🚪 Portes exposades al carrer
 
+**Últimes Plantes (Cobertes):**
+- 💧 Filtracions d'aigua de la pluja
+- ☀️ Escalfor excessiva (> 35ºC)
+- 🌪️ Major exposició a vents
 
-Vibracions → evitar proximitat a ascensors, molls de càrrega, sales de maquinària.
+#### ✅ Plantes Recomanades
+- **Plantes intermedies** (2a a 5a planta)
+- **Allunyades de cobertes** (evitar filtracions)
+- **Allunyades de base** (evitar inundacions)
 
+### 2.2 Ubicació dins del Pis (Interior vs Exterior)
 
-Aigua i desaigües → no col·locar sota lavabos, cuines o canonades.
+#### Sala Interior (RECOMANAT ✅)
+- **Avantatges:**
+  - Sense finestres a l'exterior → menor risc d'accés
+  - Menor exposició a luz, radiació solar
+  - Millor aïllament tèrmic i de soroll
+  - Menor humitat de l'exterior
 
+- **Ubicació ideal:**
+  - Al centre del pis (no als extrems)
+  - Allunyada de façanes externes
+  - Enrevolada d'altres espais (oficines, magatzems)
 
-Interferències electromagnètiques → lluny de transformadors, antenes o motors elèctrics de gran mida.
+#### Sala Exterior (EVITAR ❌)
+- Finestres = risc d'accés i robatori
+- Escalfor/fred del exterior
+- Major evaporació d'aire humit
+- Visible des del carrer
 
+### 2.3 Discreció i Ocultació
 
-Consideracions estructurals:
+#### Signalització
+- ❌ NO marcar com a "Sala de Servidors" a la porta
+- ✅ Usar noms neutres: "Sala Tècnica 01", "Magatzem", "Sala de Manteniment"
+- ✅ Porta sense vidre transparent
+- ✅ Sense indicadors visuals de que hi ha equip costós
 
+#### Ubicació Estratègica
+- 🚫 NO pròxim a recepcions (menys vigilans)
+- 🚫 NO adjacent a cafeteries (accés de moltes persones)
+- 🚫 NO al costat de passadissos principals
+- ✅ Allunyada de flux de personal
+- ✅ Si possible, amb un accés restringit addicional
 
-Capacitat de càrrega del Sòl: el forjat ha de suportar el pes concentrat de racks, SAI/UPS, climatització.
+### 2.4 Accés per Trasllat de Material Pesant
 
+**Problema:** Servidors, racks i SAI/UPS són equipaments molt pesats (200-500 kg cada un)
 
-Alçada suficient: per a sòl tècnic, cablejat, safates, conductes de climatització i un flux d’aire adequat.
+**Solucions:**
+- 📦 **Ascensor gran** (mínimo 2000 kg de capacitat)
+- 🚪 **Puertes d'ascensor suficientment grans** (> 1.2m d'ample)
+- 📍 **Planta accessible** amb muntacàrregues (no pisos alts sense elevador)
+- 🛤️ **Passadissos amples** per maniobrar carros de transport
+- 🪜 **Porta de la sala suficientment gran** per passar racks
+- 🔄 **Corbes amples** en passadissos (evitar eixarxos)
 
+### 2.5 Allunyament de Fonts de Perill Interior
+
+#### 🔊 Vibracions
+**Problemes:**
+- Dañen components electrònics
+- Provoquen fallos en discs durs
+- Desajustament de connexions
+
+**Evitar proximitat a:**
+- 🛗 Ascensors (especialment nit quan més ús)
+- 📦 Molls de càrrega (camions descàrregant)
+- ⚙️ Sales de maquinària de climatització
+- 🔩 Compressors d'aire comprimit
+
+**Distancia mínima:** > 10 metres
+
+#### 💧 Aigua i Fuites
+**Problemes:**
+- Electrocució del personal
+- Corrosió de components
+- Fallos cascada en servidors
+
+**Evitar proximitat a:**
+- 🚰 Lavabos i banys
+- 🍳 Cuines i sales de menjar
+- 🔌 Canonades verticals (ascensorós per planta)
+- 🪟 Finestres en dias plujosos
+
+**Recomanacions:**
+- NO col·locar servidor sota canonades
+- Inspeccionar regularment per humitat
+- Sistema de detecció de fuites amb alarma
+
+#### ⚡ Interferències Electromagnètiques (EMF)
+**Problemes:**
+- Corrupció de dades
+- Falsos errors de xarxa
+- Interferència en senyals
+
+**Evitar proximitat a:**
+- 🔌 Transformadors elèctrics
+- 📡 Antenes de comunicació
+- ⚙️ Motors elèctrics grans (>3kW)
+- 🔆 Línies d'alta tensió
+
+**Distancia mínima:** > 5-10 metres
+
+### 2.6 Consideracions Estructurals de l'Edifici
+
+#### 🏗️ Capacitat de Càrrega del Sòl
+
+**Problema:** Els servidors en racks pesin molt i estan concentrats en poc espai
+
+**Càlculs aproximats:**
+- Rack de servidors: 200-400 kg
+- SAI/UPS: 100-300 kg
+- Climatització: 50-200 kg
+- Cablejat i altres: 50-100 kg
+- **TOTAL PER SALA:** 500-1000 kg en ~20m²
+
+**Recomanacions:**
+- 📊 **Verificar càrrega admissible** del sòl (típicament 500-1000 kg/m²)
+- 🔍 **Inspecció estructural** per un enginyer
+- 🦶 **Distribució uniforme** de racks en tot l'espai
+- 🛠️ **Sòl tècnic elevat** (permet distribució de pes millor)
+
+#### 📏 Alçada Suficient de la Sala
+
+**Espai necessari:**
+- Racks: 2-2.5 metres d'altura
+- Sòl tècnic (si n'hi ha): 30-60 cm altura
+- Climatització superior: 20-30 cm
+- Cablejat en braguetes: 30-50 cm
+- **ALTURA TOTAL MÍNIMA:** 3.5 metres
+
+**Beneficis de gran alçada:**
+- ✅ Millor circulació d'aire calent cap a dalt
+- ✅ Espai per a colocació de cablejat
+- ✅ Flexibilitat per a futurs upgrades
+- ✅ Millor ventilació de climatització
+
+#### 🌡️ Aïllament Tèrmic
+
+**Recomanacions:**
+- Parets i sostre ben aïllats
+- Porta aïllada (no metàl·lica)
+- Sense fuites d'aire
+- Sellar forats per canonades i cables
+
+---
+
+## 🏗️ Part 3: Infraestructura Tècnica de la Sala
+
+### 3.1 Sistemes de Climatització
+
+| Aspecto | Especificació |
+|---------|---------------|
+| **Temperatura** | 18-27ºC (idealment 20-24ºC) |
+| **Humitat relativa** | 40-55% (idealment 45-50%) |
+| **Canvis de temperatura/hora** | < 5ºC |
+| **Redundancia** | Mínim 2 sistemes independents |
+| **Monitoritzaciò** | Sensors continus amb alarma |
+
+**Tipus:**
+- 🌀 **AC de precisió**: Refrigeració distribuïda uniforme
+- 🚀 **Ventilació en cambra fria**: Sòl tècnic amb aire fred
+- 🧊 **Evaporadors**: Per espais petits
+
+### 3.2 Protecció contra Incendis
+
+- 🚨 Detectores de sants (automàtiques)
+- 🧯 Sistemes d'extinció amb gas inert (no afecta els equips)
+- 💨 Detecció de sants inciodent (pre-incendi)
+- 🚪 Compuertes tallafocs automàtiques
+- 📋 Plan d'evacuació clara
+
+### 3.3 Control d'Accés
+
+- 🔑 Acceso per tarjeta o biometria
+- 📹 Cámara de seguridad apuntando a la puerta
+- 📊 Registro de todos los accesos (quién, cuándo)
+- 🔔 Alarma si alguien entra sin autorización
+
+### 3.4 SAI/UPS (Alimentació Ininterrompuda)
+
+- ⏱️ Autonomia mínima: 10-15 minuts (permetre aturada controlada)
+- 🔌 Connectat a tots els sistemes crítics
+- 📈 Capacidad proporcional a la demanda
+- 🔄 Prova mensual de transferencia automàtica
+
+---
+
+## 📋 Xlist de Verificació per a CPD
+
+### Ubicació Geogràfica
+- [ ] Zona sense desastres naturals recurrents
+- [ ] Baixa criminalitat documentada
+- [ ] Allunyada de instal·lacions perilloses (> 500m-1km)
+- [ ] Accés a electricitat redundant
+- [ ] Accés a internet de múltiples operadores
+- [ ] Accés 24/7 per a personal i emergències
+
+### Ubicació dins l'Edifici
+- [ ] Planta intermedia (evitar base i cobertes)
+- [ ] Sala interior sense finestres externes
+- [ ] Allunyada de recepcions i passadissos
+- [ ] No senyalitzada externament
+- [ ] Accés per muntacàrregues/ascensor gran
+- [ ] > 10m d'ascensors i molls de càrrega
+- [ ] > 5-10m de transformadors i antenes
+- [ ] NO sota canonades ni lavabos
+
+### Infraestructura Tècnica
+- [ ] Climatització de precisió i redundant
+- [ ] Temperature 18-27ºC, humitat 40-55%
+- [ ] Detectors de sants i extinció automàtica
+- [ ] Control d'accés físic (tarjeta/biometria)
+- [ ] Càmares de vigilancia 24/7
+- [ ] SAI/UPS amb >= 15 min autonomia
+- [ ] Sòl tècnic elevat (si espai)
+- [ ] Alçada suficient (>3.5m)
+- [ ] Capacitat de càrrega verificada
+
+---
+
+## 🎯 Conclusió
+
+L'ubicació i el disseny d'un CPD és **crítica per a la disponibilitat i seguretat** de les operacions informàtiques. Una bona ubicació prevé la majoria de fallos físics i permet que la seguretat lògica funcioni correctament.
+
+**Recorda:** Un centre de dades ben dissenyat és una inversió que es recupera en menys temps de funcionament sense incidents.
