@@ -4,46 +4,35 @@ Aquest bloc cobreix les tècniques, eines i configuracions necessàries per prev
 
 ---
 
-## 📂 Fitxers i Continguts del RA3
+## 📌 Index de Continguts del RA3
 
-### 1. 🔐 Llistes de Control d'Accés (ACL)
-* **Linux:** Gestió de permisos avançats POSIX amb `getfacl` i `setfacl` (assignació a usuaris/grups específics i permisos per defecte `-d`).
-* **Windows:** Configuració de permisos NTFS (Lectura, Modificació, Control Total) i herència de permisos des de la pestanya de seguretat o mitjançant la consola amb `icacls`.
+Fes clic a qualsevol dels temes per accedir a la documentació extensa i comandes pràctiques:
 
-### 2. 🦠 Antimalware i Protecció
-* **Linux:** Instal·lació i ús d'eines d'escaneig com **ClamAV** (`clamscan`), eines de detecció de *rootkits* (**rkhunter**, **chkrootkit**) i integració de signatures.
-* **Windows:** Configuració de **Microsoft Defender Antivirus**, programació d'escanejos, protecció en temps real, aïllament en quarantena i regles de reducció de la superfície d'atac (ASR).
-
-### 3. 🔑 Autenticació i Control d'Accés
-* **Linux:** Configuració de mòduls d'autenticació plugables (**PAM** - `/etc/pam.d/`), autenticació per claus SSH (parell clau pública/privada) i restricció d'accés a `root`.
-* **Windows:** Autenticació local i en domini (**Active Directory**), protocols Kerberos i NTLM, i implementació d'autenticació multifactoret (**MFA**).
-
-### 4. 🔒 Polítiques de Contrasenyes
-* **Linux:** Configuració de complexitat, caducitat i historial de claus als fitxers `/etc/login.defs` i `/etc/security/pwquality.conf`.
-* **Windows:** Aplicació de polítiques de directiva de grup (**GPO**) per a la longitud mínima, edat màxima, historial i bloqueig de compte darrere intents fallits.
-
-### 5. 📜 Certificats Digitals i PKI
-* **Linux:** Generació de claus i sol·licituds de certificat (CSR) amb **OpenSSL**, gestió de gestors de certificats de l'entitat de certificació (CA) i instal·lació a `/etc/ssl/certs/`.
-* **Windows:** Gestió del magatzem de certificats (`certmgr.msc`), desplegament de certificats mitjançant **Active Directory Certificate Services (AD CS)** i configuració a IIS.
-
-### 6. 🔐 Encriptació de Dades i Disc
-* **Linux:** Xifrat de disc complet amb **LUKS** (`cryptsetup`), xifrat de directoris individuals (`eCryptfs`) i xifrat de dades en tràsit (TLS/SSH).
-* **Windows:** Xifrat de unitats de disc amb **BitLocker** (amb o sense xip TPM) i xifrat de fitxers/carpetes amb **EFS** (Encrypting File System).
-
-### 7. 📋 Polítiques de Seguretat Global
-* **Linux:** Hardening del sistema, aplicació de perfils de seguretat amb **AppArmor** o **SELinux**, i auditories del sistema amb **auditd**.
-* **Windows:** Implementació de **Directives de Seguretat Local** (`secpol.msc`) i **GPOs de domini**, polítiques d'execució d'aplicacions (**AppLocker** / **WDAC**).
+* **[🔐 Llistes de Control d'Accés (ACL)](acl.md)**
+  * Permisos avançats a Linux (`getfacl`/`setfacl`) i permisos NTFS a Windows (`icacls`).
+* **[🦠 Antimalware i Protecció](antimalware.md)**
+  * Escaneig amb ClamAV i rkhunter a Linux; Microsoft Defender i regles ASR a Windows.
+* **[🔑 Autenticació i Control d'Accés](autenticacio.md)**
+  * Mòduls PAM i claus SSH a Linux; Active Directory, Kerberos i MFA a Windows.
+* **[🔒 Polítiques de Contrasenyes](contrasenyes.md)**
+  * Gestió de complexitat a `/etc/security/pwquality.conf` i GPOs de domini a Windows.
+* **[📜 Certificats Digitals i PKI](certificat_digital.md)**
+  * Generació amb OpenSSL a Linux i gestió amb AD CS / `certmgr.msc` a Windows.
+* **[🔐 Encriptació de Dades i Disc](encriptacio.md)**
+  * Xifrat de disc amb LUKS (`cryptsetup`) a Linux i BitLocker / EFS a Windows.
+* **[📋 Polítiques de Seguretat Global](politicas.md)**
+  * Hardening amb SELinux/AppArmor a Linux i Directives de Seguretat (`secpol.msc`) a Windows.
 
 ---
 
 ## 📊 Taula Comparativa Resum: Windows vs Linux
 
-| Concepte | Implementació a Linux 🐧 | Implementació a Windows 🪟 |
-| :--- | :--- | :--- |
-| **ACLs** | `getfacl` / `setfacl` | Interfície NTFS / `icacls` |
-| **Antimalware** | ClamAV / rkhunter | Windows Defender |
-| **Autenticació** | PAM / SSH Keys | Active Directory / Kerberos |
-| **Contrasenyes** | `/etc/login.defs` / `pwquality` | Directives de grup (GPO) |
-| **Certificats** | OpenSSL / `/etc/ssl/` | `certmgr.msc` / AD CS |
-| **Encriptació** | LUKS / `cryptsetup` | BitLocker / EFS |
-| **Polítiques** | SELinux / AppArmor / `auditd` | GPO (`secpol.msc`) / AppLocker |
+| Concepte | Implementació a Linux 🐧 | Implementació a Windows 🪟 | Documentació |
+| :--- | :--- | :--- | :---: |
+| **ACLs** | `getfacl` / `setfacl` | Interfície NTFS / `icacls` | [Anar ➡️](acl.md) |
+| **Antimalware** | ClamAV / rkhunter | Microsoft Defender | [Anar ➡️](antimalware.md) |
+| **Autenticació** | PAM / SSH Keys | Active Directory / Kerberos | [Anar ➡️](autenticacio.md) |
+| **Contrasenyes** | `/etc/login.defs` / `pwquality` | Directives de grup (GPO) | [Anar ➡️](contrasenyes.md) |
+| **Certificats** | OpenSSL / `/etc/ssl/` | `certmgr.msc` / AD CS | [Anar ➡️](certificat_digital.md) |
+| **Encriptació** | LUKS / `cryptsetup` | BitLocker / EFS | [Anar ➡️](encriptacio.md) |
+| **Polítiques** | SELinux / AppArmor / `auditd` | GPO (`secpol.msc`) / AppLocker | [Anar ➡️](politicas.md) |
