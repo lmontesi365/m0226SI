@@ -6,23 +6,23 @@ theme:
 nav:
   - Inicio: index.md
   - "RA1: Seguretat Passiva": 
-    - "Conceptes Generals": ra1/conceptos.md
+    - "Conceptes Generals": docs/ra1/conceptos.md
     - "Seguretat Física i Lògica":
-      - "Índex": ra1/seguretat-fisica-logica/index.md
-      - "Seguretat Física": ra1/seguretat-fisica-logica/seguretat-fisica.md
-      - "Seguretat Lògica": ra1/seguretat-fisica-logica/seguretat-logica.md
+      - "Índex": docs/ra1/seguretat-fisica-logica/index.md
+      - "Seguretat Física": docs/ra1/seguretat-fisica-logica/seguretat-fisica.md
+      - "Seguretat Lògica": docs/ra1/seguretat-fisica-logica/seguretat-logica.md
     - "Centre de Processament de Dades (CPD)":
-      - "Índex CPD": ra1/cpd/index_cpd.md
-      - "Ubicació Geogràfica": ra1/cpd/ubicacio-geografica.md
-      - "Ubicació dins l'Edifici": ra1/cpd/ubicacio-edifici.md
-      - "Infraestructura Tècnica": ra1/cpd/infraestructura-tecnica.md
-      - "Checklist": ra1/cpd/checklist.md
+      - "Índex CPD": docs/ra1/cpd/index_cpd.md
+      - "Ubicació Geogràfica": docs/ra1/cpd/ubicacio-geografica.md
+      - "Ubicació dins l'Edifici": docs/ra1/cpd/ubicacio-edifici.md
+      - "Infraestructura Tècnica": docs/ra1/cpd/infraestructura-tecnica.md
+      - "Checklist": docs/ra1/cpd/checklist.md
     
   - "RA2: Emmagatzament de la informació":
-    - "Criptografia": ra2/cripto.md
+    - "Criptografia": docs/ra2/cripto.md
     
   - "RA3: Seguretat Activa":
-    - "Polítiques de Seguretat": ra3/politicas.md
-    - "ACL Windows": ra3/acl_windows.md
-    - "Autenticació": ra3/autenticacio.md
-    - "Contrasenyes": ra3/contrasenyes.md
+    - "Polítiques de Seguretat": docs/ra3/politicas.md
+    - "ACL Windows": docs/ra3/acl_windows.md
+    - "Autenticació": docs/ra3/autenticacio.md
+    - "Contrasenyes": docs/ra3/contrasenyes.md
