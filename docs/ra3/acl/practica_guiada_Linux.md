@@ -1,7 +1,8 @@
-🧪 Pràctica Guiada per als Alumnes
+## 🧪 Pràctica Guiada per als Alumnes
+
 Pots executar aquesta seqüència de comandes a la terminal per comprovar el funcionament de les ACL:
 
-Bash
+```bash
 # 1. Crear un directori de treball i un fitxer de prova
 mkdir /tmp/practica_acl
 echo "Document secret de seguretat" > /tmp/practica_acl/secret.txt
@@ -21,15 +22,20 @@ setfacl -d -m g:alumnes:rwx /tmp/practica_acl
 # 6. Verifica el resultat final de la carpeta i del fitxer
 getfacl /tmp/practica_acl
 getfacl /tmp/practica_acl/secret.txt
-✅ Checklist de Comprovació ACL
-[ ] Comanda getfacl utilitzada per verificar l'estat inicial
 
-[ ] Permís d'usuari específic afegit amb setfacl -m u:nom:permisos
+```
 
-[ ] Permís de grup especificat afegit amb setfacl -m g:nom:permisos
+---
 
-[ ] Presència del símbol + comprovada amb ls -l
+## ✅ Checklist de Comprovació ACL
 
-[ ] Permisos per defecte en carpeta configurats amb -d
+* [ ] Comanda `getfacl` utilitzada per verificar l'estat inicial
+* [ ] Permís d'usuari específic afegit amb `setfacl -m u:nom:permisos`
+* [ ] Permís de grup especificat afegit amb `setfacl -m g:nom:permisos`
+* [ ] Presència del símbol `+` comprovada amb `ls -l`
+* [ ] Permisos per defecte en carpeta configurats amb `-d`
+* [ ] Neteja de permisos realitzada amb `-x` o `-b`
 
-[ ] Neteja de permisos realitzada amb -x o -b
+```
+
+```
