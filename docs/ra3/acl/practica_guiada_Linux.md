@@ -38,7 +38,7 @@ getfacl /tmp/practica_acl/secret.txt
 
 ```
 
-``` solució de la verificació final de la pràctica guiada .
+## ✅ solució final de la pràctica guiada .
 
 Quan executes les dues comandes `getfacl`, aquesta és la sortida exacta a la terminal:
 
