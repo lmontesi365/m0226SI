@@ -10,7 +10,7 @@ nav:
     - "Seguretat Física i Lògica": ra1/S_fisca-Logica.md
     - "Centre de Processament de Dades (CPD)": ra1/CPD.md
     - "Centre de Processament de Dades (CPD)": ra1/servidors.md
-    - "Centre de Processament de Dades (CPD)": ra1/CPD
+    - "Centre de Processament de Dades (CPD)": ra1/CPD/index_cpd.md
   - "RA2: Emmagatzament de la informació":
     - "Criptografia": ra2/cripto.md
   - "RA3: Seguretat Activa":
