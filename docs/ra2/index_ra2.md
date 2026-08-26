@@ -33,7 +33,7 @@ Fes clic a qualsevol dels apartats per accedir a la documentació extensa i les 
 
 1. **Verificació d'integritat:** Comprovar la suma HASH de fitxers descarregats amb `sha256sum` i `Get-FileHash`.
 2. **Xifratge simètric i asimètric:** Executar el laboratori pràctic d'OpenSSL i GPG.
-3. ### 3. [Pràctica Pas a Pas: OpenSSL i GnuPG](./gpg.md#-pràctica-pas-a-pas-openssl-i-gnupg-gpg)
+3. ### 3. [Pràctica Pas a Pas: OpenSSL i GnuPG](./GPG.md#-pràctica-pas-a-pas-openssl-i-gnupg-gpg)
 Guia d'ordres pràctiques per a la línia de comandes:
 * **OpenSSL:** Xifratge simètric amb `AES-256`, generació de claus `RSA` de 4096 bits i xifratge asimètric.
 * **GnuPG (GPG):** Creació de claus OpenPGP, exportació/importació de claus públiques, xifratge de documents i signatura digital amb fitxers de verificació `.sig`.
