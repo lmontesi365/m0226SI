@@ -12,19 +12,19 @@ Fes clic a qualsevol dels apartats per accedir a la documentació extensa i les 
 * **Descripció:** Introducció a la seguretat informàtica i els principis bàsics de la protecció de la informació.
 * **Guia d'estudi:** Enfoca't en entendre la **Triada CID** (Confidencialitat, Integritat i Disponibilitat), l'autenticitat i el no-repudi, així com la diferència entre amenaça, vulnerabilitat i risc.
 
-### 🏢 2. [Seguretat Física](seguretat_fisica.md)
+### 🏢 2. [Seguretat Física](seguretat-fisca-logica/seguretat-fisica.md)
 * **Descripció:** Conjunt de mesures per protegir el maquinari i les instal·lacions contra amenaces naturals o humanes.
 * **Guia d'estudi:** Revisa els controls d'accés físic (targetes, biometria), sistemes de protecció contra incendis, climatització i control ambiental per evitar fallades en el hardware.
 
-### 💻 3. [Seguretat Lògica](seguretat_logica.md)
+### 💻 3. [Seguretat Lògica](seguretat-fisca-logica/seguretat_logica.md)
 * **Descripció:** Protecció de la informació en format digital i dels programes mitjançant eines de software.
 * **Guia d'estudi:** Estudia els mecanismes de control d'accés digital, polítiques d'autenticació, xifratge de dades, utilització de tallafocs (*firewalls*) i actualitzacions del sistema.
 
-### 🏙️ 4. [Centre de Processament de Dades (CPD)](cpd.md)
+### 🏙️ 4. [Centre de Processament de Dades (CPD)](servidors.md)
 * **Descripció:** Disseny i requisits de seguretat per a les sales de servidors corporatives.
 * **Guia d'estudi:** Aprèn les característiques principals d'un CPD: terra tècnic, cablatge estructurat, redundància de subministrament, canals de comunicació i zonificació de seguretat.
 
-### 🔋 5. [Sistemes d'Alimentació Ininterrompuda (SAI / UPS)](sai.md)
+### 🔋 5. [Sistemes d'Alimentació Ininterrompuda (SAI / UPS)](SAI.md)
 * **Descripció:** Dispositius encarregats de mantenir el subministrament elèctric quan falla la xarxa principal.
 * **Guia d'estudi:** Diferencia entre els tipus de SAI (**Off-line**, **Line-interactive** i **On-line / Doble conversió**) i aprèn a calcular l'autonomia i la potència necessària (VA/Watts) per als equips.
 
