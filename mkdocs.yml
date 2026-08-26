@@ -8,7 +8,8 @@ nav:
   - "RA1: Seguretat Passiva": 
     - "Conceptes Generals": ra1/conceptos.md
     - "Seguretat Física i Lògica": ra1/S_fisca-Logica.md
-    - "Seguretat Fisica-Logica 2": ra1/seguretat-fisica-logica.md
+    - "Seguretat Fisica": docs/ra1/seguretat-fisica-logica/seguretat-fisica.md
+     - "Seguretat Logica": docs/ra1/seguretat-fisica-logica/seguretat-logica.md
     - "Centre de Processament de Dades (CPD)": ra1/servidors.md
     - "Centre de Processament de Dades (CPD)": ra1/CPD/index_cpd.md
     
