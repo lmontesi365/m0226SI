@@ -4,7 +4,7 @@ theme:
 
 nav:
   - Inicio: index.md
-  - RA1:
+  - RA1-pp:
     - Conceptes Generals: ra1/conceptos.md
     - Seguretat Física i Lògica:
       - Índex: ra1/seguretat-fisica-logica/index.md
