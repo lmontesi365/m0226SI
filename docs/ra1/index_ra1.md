@@ -12,7 +12,7 @@ Fes clic a qualsevol dels apartats per accedir a la documentació extensa i les 
 * **Descripció:** Introducció a la seguretat informàtica i els principis bàsics de la protecció de la informació.
 * **Guia d'estudi:** Enfoca't en entendre la **Triada CID** (Confidencialitat, Integritat i Disponibilitat), l'autenticitat i el no-repudi, així com la diferència entre amenaça, vulnerabilitat i risc.
 
-### 🏢 2. [Seguretat Física](docs/ra1/seguretat-fisica-logica/seguretat-fisica.md)
+### 🏢 2. [Seguretat Física](/seguretat-fisica-logica/seguretat-fisica.md)
 * **Descripció:** Conjunt de mesures per protegir el maquinari i les instal·lacions contra amenaces naturals o humanes.
 * **Guia d'estudi:** Revisa els controls d'accés físic (targetes, biometria), sistemes de protecció contra incendis, climatització i control ambiental per evitar fallades en el hardware.
 
