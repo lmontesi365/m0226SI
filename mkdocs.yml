@@ -4,7 +4,7 @@ theme:
 
 nav:
   - Inicio: index.md
-  - RA1:
+  - RA1: index_ra1.md
     - Conceptes Generals: ra1/conceptos.md
     - Seguretat Física i Lògica:
       - Índex F-L: ra1/seguretat-fisica-logica/index.md
@@ -16,6 +16,8 @@ nav:
       - Ubicació Edifici: ra1/cpd/ubicacio-edifici.md
       - Infraestructura Tècnica: ra1/cpd/infraestructura-tecnica.md
       - Checklist: ra1/cpd/checklist.md
+      - ACL Windows: ra3/acl/acl_windows.md
+      - ACL Linux: ra3/acl/acl_linux.md
   - RA2:
     - Criptografia: ra2/cripto.md
   - RA3:
