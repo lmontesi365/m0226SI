@@ -20,6 +20,31 @@ Fes clic a qualsevol dels apartats per accedir a la documentació extensa i les 
 ### 🔑 3. [Criptografia i Integritat de Dades](criptografia.md)
 * **Descripció:** Mecanismes per garantir la confidencialitat de la informació i verificar que no ha estat alterada.
 * **Guia d'estudi:** Estudia les funcions hash (SHA-256, MD5) per comprovar la integritat de fitxers, la diferència entre xifratge simètric (AES) i asimètric (RSA) i la generació de signatures digitals.
+* **Funcions Hash:** MD5, SHA-1, SHA-256 i comprovació d'integritat en Linux i Windows.
+* **Tipus de Xifratge:**
+  * **Simètric:** AES-256, velocitat i xifratge en disc.
+  * **Asimètric:** RSA, ECC, claus públiques i privades.
+* **Certificats Digitals i PKI:** Funcionament de les Autoritats de Certificació (CA), X.509 i TLS/HTTPS.
+* **Xifratge en Repòs:** Protecció de discs amb BitLocker i LUKS.
+
+---
+
+## 🛠️ Activitats i Laboratoris Pràctics
+
+1. **Verificació d'integritat:** Comprovar la suma HASH de fitxers descarregats amb `sha256sum` i `Get-FileHash`.
+2. **Xifratge simètric i asimètric:** Executar el laboratori pràctic d'OpenSSL i GPG.
+3. ### 3. [Pràctica Pas a Pas: OpenSSL i GnuPG](./criptografia.md#-pràctica-pas-a-pas-openssl-i-gnupg-gpg)
+Guia d'ordres pràctiques per a la línia de comandes:
+* **OpenSSL:** Xifratge simètric amb `AES-256`, generació de claus `RSA` de 4096 bits i xifratge asimètric.
+* **GnuPG (GPG):** Creació de claus OpenPGP, exportació/importació de claus públiques, xifratge de documents i signatura digital amb fitxers de verificació `.sig`.
+* **Taula comparativa:** Resum ràpid de sintaxi entre OpenSSL i GnuPG.
+4. **Còpies de seguretat i DRP:** Implementació de plans de recuperació davant desastres (RTO / RPO).
+
+---
+
+## 🔗 Recursos Addicionals
+* [Documentació Oficial d'OpenSSL](https://www.openssl.org/docs/)
+* [Manual d'usuari de GnuPG (GPG)](https://gnupg.org/documentation/)
 
 ---
 
