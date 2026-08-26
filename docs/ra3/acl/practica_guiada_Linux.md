@@ -43,7 +43,7 @@ getfacl /tmp/practica_acl/secret.txt
 Quan executes les dues comandes `getfacl`, aquesta és la sortida exacta a la terminal:
 
 ```bash
-# 1. Verificació de la carpeta /tmp/practica_acl
+**1. Verificació de la carpeta /tmp/practica_acl
 getfacl /tmp/practica_acl
 
 ```
@@ -68,7 +68,7 @@ default:other::---
 ---
 
 ```bash
-# 2. Verificació del fitxer /tmp/practica_acl/secret.txt
+**2. Verificació del fitxer /tmp/practica_acl/secret.txt
 getfacl /tmp/practica_acl/secret.txt
 
 ```
