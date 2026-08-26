@@ -17,7 +17,6 @@ Conjunt de mesures i controls encaminats a protegir els equips, dispositius i in
 
 ### 1️⃣ **Control d'Accés**
 
-
 **Bones pràctiques:**
 - Accés només a personal autoritzat
 - Doble autenticació per a sales críticas
@@ -78,8 +77,17 @@ Conjunt de mesures i controls encaminats a protegir els equips, dispositius i in
 
 #### 🛢️ Generador Diesel
 
+**Especificacions:**
+- Capacitat mínim per 24 hores contínues
+- Test de funcionament mensual
+- Nivell de combustible controlat
 
 #### ⚡ Subministrament Elèctric Dual
+
+**Configuració:**
+- Dos subministres de xarxa elèctrica independents
+- Automatització de commutació (< 4ms)
+- Monitoratge continu de voltatge
 
 ---
 
@@ -134,16 +142,11 @@ Conjunt de mesures i controls encaminats a protegir els equips, dispositius i in
 
 ## 🎯 Objectius de Seguretat Física
 
-✅ **Disponibilitat:** Els sistemes estan sempre operatius  
-✅ **Integritat:** Els equipaments no són danyats o sabotejats  
-✅ **Confidencialitat:** Nomes personal autoritzat accedeix  
-✅ **Resiliència:** El centre pot operar malgrat fallos  
+✅ **Disponibilitat:** Els sistemes estan sempre operatius
+✅ **Integritat:** Els equipaments no són danyats o sabotejats
+✅ **Confidencialitat:** Nomes personal autoritzat accedeix
+✅ **Resiliència:** El centre pot operar malgrat fallos
 
 ---
 
 *Última actualització: 2026-08-26*
-
-
-
-
-
