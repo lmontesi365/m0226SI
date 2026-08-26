@@ -6,8 +6,8 @@ nav:
   - Inicio: index.md
   - RA1:
     - Conceptes Generals: ra1/conceptos.md
-    - Seguretat Física i Lògica-pp:
-      - Índex: ra1/seguretat-fisica-logica/index.md
+    - Seguretat Física i Lògica:
+      - Índex F-L: ra1/seguretat-fisica-logica/index.md
       - Seguretat Física: ra1/seguretat-fisica-logica/seguretat-fisica.md
       - Seguretat Lògica: ra1/seguretat-fisica-logica/seguretat-logica.md
     - CPD:
