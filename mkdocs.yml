@@ -7,16 +7,22 @@ nav:
   - Inicio: index.md
   - "RA1: Seguretat Passiva": 
     - "Conceptes Generals": ra1/conceptos.md
-    - "Seguretat Física i Lògica": ra1/S_fisca-Logica.md
-    - "Seguretat Fisica": docs/ra1/seguretat-fisica-logica/seguretat-fisica.md
-     - "Seguretat Logica": docs/ra1/seguretat-fisica-logica/seguretat-logica.md
-    - "Centre de Processament de Dades (CPD)": ra1/servidors.md
-    - "Centre de Processament de Dades (CPD)": ra1/CPD/index_cpd.md
+    - "Seguretat Física i Lògica":
+      - "Índex": ra1/seguretat-fisica-logica/index.md
+      - "Seguretat Física": ra1/seguretat-fisica-logica/seguretat-fisica.md
+      - "Seguretat Lògica": ra1/seguretat-fisica-logica/seguretat-logica.md
+    - "Centre de Processament de Dades (CPD)":
+      - "Índex CPD": ra1/cpd/index_cpd.md
+      - "Ubicació Geogràfica": ra1/cpd/ubicacio-geografica.md
+      - "Ubicació dins l'Edifici": ra1/cpd/ubicacio-edifici.md
+      - "Infraestructura Tècnica": ra1/cpd/infraestructura-tecnica.md
+      - "Checklist": ra1/cpd/checklist.md
     
   - "RA2: Emmagatzament de la informació":
     - "Criptografia": ra2/cripto.md
+    
   - "RA3: Seguretat Activa":
-    - "politiques de Seguretat": ra3/politicas.md
-    - "Acl Windows": ra3/acl_windows.md
+    - "Polítiques de Seguretat": ra3/politicas.md
+    - "ACL Windows": ra3/acl_windows.md
     - "Autenticació": ra3/autenticacio.md
     - "Contrasenyes": ra3/contrasenyes.md
