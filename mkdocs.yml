@@ -1,26 +1,25 @@
 site_name: M0226 - Seguretat Informàtica
 theme:
   name: material
-  language: ca # Configura la web en català
 
 nav:
   - Inicio: index.md
   - RA1:
-    - Conceptes: ra1/conceptos.md
+    - Conceptes Generals: ra1/conceptos.md
     - Seguretat Física i Lògica:
       - Índex: ra1/seguretat-fisica-logica/index.md
       - Seguretat Física: ra1/seguretat-fisica-logica/seguretat-fisica.md
       - Seguretat Lògica: ra1/seguretat-fisica-logica/seguretat-logica.md
-    - Índex CPD: ra1/cpd/index_cpd.md
+    - CPD:
+      - Índex CPD: ra1/cpd/index_cpd.md
       - Ubicació Geogràfica: ra1/cpd/ubicacio-geografica.md
-      - Ubicació dins l'Edifici: ra1/cpd/ubicacio-edifici.md
+      - Ubicació Edifici: ra1/cpd/ubicacio-edifici.md
       - Infraestructura Tècnica: ra1/cpd/infraestructura-tecnica.md
       - Checklist: ra1/cpd/checklist.md
   - RA2:
     - Criptografia: ra2/cripto.md
   - RA3:
-    - Polítiques: ra3/politicas.md
+    - Polítiques de Seguretat: ra3/politicas.md
     - ACL Windows: ra3/acl_windows.md
     - Autenticació: ra3/autenticacio.md
     - Contrasenyes: ra3/contrasenyes.md
-  
