@@ -163,10 +163,3 @@ sudo mdadm --detail /dev/md10
 * [ ] Creació d'espais d'emmagatzematge redundants a Windows via PowerShell o GUI
 
 ```
-
-<ElicitationsGroup message="Et cal que desenvolupem algun dels altres fitxers del RA2?">
-  <Elicitation label="Desenvolupar el fitxer de Còpies de Seguretat" query="Redacta el contingut extens del fitxer copies_seguretat.md per al RA2 adaptat a Linux i Windows."/>
-  <Elicitation label="Desenvolupar el fitxer de Criptografia i Integritat" query="Redacta el contingut extens del fitxer criptografia.md per al RA2 adaptat a Linux i Windows."/>
-</ElicitationsGroup>
-
-```
