@@ -18,5 +18,5 @@ Benvinguts al web d'apunts del mòdul. Aquí trobareu tota la informació organi
 * **[15/06/2026]** Afegits els conceptes inicials del RA1.
 
 
-!!! info "Nota per als alumnes"
+!!! info
     Podeu fer servir el cercador de la part superior per trobar qualsevol comando o concepte clau ràpidament.
