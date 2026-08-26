@@ -38,9 +38,9 @@ getfacl /tmp/practica_acl/secret.txt
 
 ```
 
-```Aquí tens la solució de la verificació final de la pràctica guiada (pas 6).
+``` solució de la verificació final de la pràctica guiada .
 
-Quan executes les dues comandes `getfacl`, aquesta és la sortida exacta que han de veure els alumnes a la terminal:
+Quan executes les dues comandes `getfacl`, aquesta és la sortida exacta a la terminal:
 
 ```bash
 # 1. Verificació de la carpeta /tmp/practica_acl
