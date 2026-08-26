@@ -16,7 +16,7 @@ Fes clic a qualsevol dels apartats per accedir a la documentació extensa i les 
 * **Descripció:** Conjunt de mesures per protegir el maquinari i les instal·lacions contra amenaces naturals o humanes.
 * **Guia d'estudi:** Revisa els controls d'accés físic (targetes, biometria), sistemes de protecció contra incendis, climatització i control ambiental per evitar fallades en el hardware.
 
-### 💻 3. [Seguretat Lògica](docs/ra1/seguretat-fisica-logica/seguretat-logica.md)
+### 💻 3. [Seguretat Lògica](seguretat-fisica-logica/seguretat-logica.md)
 * **Descripció:** Protecció de la informació en format digital i dels programes mitjançant eines de software.
 * **Guia d'estudi:** Estudia els mecanismes de control d'accés digital, polítiques d'autenticació, xifratge de dades, utilització de tallafocs (*firewalls*) i actualitzacions del sistema.
 
