@@ -180,6 +180,3 @@ Robocopy.exe $Origen $Desti /E /NP /LOG:"D:\Backups\log_$Data.txt"
 * [ ] Ús i programació de tasques automàtiques amb `cron` (Linux) i el Programador de Tasques (Windows)
 
 ```
-
-<
-```
