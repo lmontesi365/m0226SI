@@ -8,7 +8,7 @@ Aquest bloc cobreix les tècniques, eines i configuracions necessàries per prev
 
 Fes clic a qualsevol dels temes per accedir a la documentació extensa i comandes pràctiques:
 
-* **[🔐 Llistes de Control d'Accés (ACL)](acl.md)**
+* **[🔐 Llistes de Control d'Accés (ACL)](acl/acl_linux.md)**
   * Permisos avançats a Linux (`getfacl`/`setfacl`) i permisos NTFS a Windows (`icacls`).
 * **[🦠 Antimalware i Protecció](antimalware.md)**
   * Escaneig amb ClamAV i rkhunter a Linux; Microsoft Defender i regles ASR a Windows.
