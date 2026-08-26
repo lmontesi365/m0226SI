@@ -38,4 +38,55 @@ getfacl /tmp/practica_acl/secret.txt
 
 ```
 
+```Aquí tens la solució de la verificació final de la pràctica guiada (pas 6).
+
+Quan executes les dues comandes `getfacl`, aquesta és la sortida exacta que han de veure els alumnes a la terminal:
+
+```bash
+# 1. Verificació de la carpeta /tmp/practica_acl
+getfacl /tmp/practica_acl
+
 ```
+
+**Sortida esperada per a la carpeta:**
+
+```text
+# file: tmp/practica_acl
+# owner: usuari1
+# group: usuari1
+user::rwx
+group::r-x
+other::r-x
+default:user::rwx
+default:group::---
+default:group:alumnes:rwx
+default:mask::rwx
+default:other::---
+
+```
+
+---
+
+```bash
+# 2. Verificació del fitxer /tmp/practica_acl/secret.txt
+getfacl /tmp/practica_acl/secret.txt
+
+```
+
+**Sortida esperada per al fitxer:**
+
+```text
+# file: tmp/practica_acl/secret.txt
+# owner: usuari1
+# group: usuari1
+user::rw-
+user:usuari2:r--
+group::---
+mask::r--
+other::---
+
+```
+
+> **Comprovació addicional amb `ls -l`:**
+> Si els alumnes fan un `ls -l /tmp/practica_acl/secret.txt`, els permisos han de mostrar el signe **`+`** al final:
+> `-rw-r-----+ 1 usuari1 usuari1 28 aug 26 17:47 secret.txt`
