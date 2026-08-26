@@ -17,27 +17,6 @@ Per gestionar les ACL en sistemes Linux es fan servir dues eines fonamentals:
 
 ```bash
 setfacl [opcions] [regla] fitxer_o_directori
-
-# 🔐 Llistes de Control d'Accés (ACL) a Linux
-
-Les **ACL (Access Control Lists)** permeten assignar permisos d'accés detallats (lectura, escriptura i execució) a usuaris o grups específics que no són el propietari ni el grup principal del fitxer o directori.
-
-Aquest sistema amplia el model tradicional de permisos POSIX (`rwx` per a Usuari, Grup i Altres), oferint una gestió de la seguretat molt més flexible.
-
----
-
-## 📚 Teoria Base
-
-Per gestionar les ACL en sistemes Linux es fan servir dues eines fonamentals:
-
-- **`getfacl`**: Utilitzada per **consultar** les ACL actives en un fitxer o directori.
-- **`setfacl`**: Utilitzada per **establir, modificar o eliminar** regles d'ACL.
-
-### Sintaxi del comandament `setfacl`
-
-```bash
-setfacl [opcions] [regla] fitxer_o_directori
-
 ```
 
 ### Opcions Més Utilitzades
