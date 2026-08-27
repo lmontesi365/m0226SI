@@ -29,8 +29,10 @@ example "🔍 exemple Confidencialitat"
 
  example "🔍 exemple Disponibilitat"
     Un servidor de correu electrònic ha d’estar en funcionament perquè els usuaris puguin enviar i rebre missatges sempre que ho requereixin.
-   * **Exemple concret:** !!! danger "Amenaça Clau (DDoS)" Un atac **DDoS** (Denegació de Servei Distribuït) afecta directament a la **disponibilitat**, deixant un servei totalment inoperatiu per als usuaris.
+    
+    * **Exemple concret:** !!! danger "Amenaça Clau (DDoS)" Un atac **DDoS** (Denegació de Servei Distribuït) afecta directament a la **disponibilitat**, deixant un servei totalment inoperatiu per als usuaris.
 
+   
 ### 4. No repudi
 * **Definició:** Assegurar que un usuari no pugui negar una acció que ha realitzat, com ara l’enviament d’un missatge o una transacció.
 
