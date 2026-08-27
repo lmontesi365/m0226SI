@@ -145,7 +145,7 @@ Unlock-LocalUser -Name "Marta"
 
 ---
 
-## 🧪 Pràctica Guiada per a l'Alumnat
+## 🧪 Pràctica Guiada
 
 ```bash
 # PRÀCTICA A LINUX: Aplicar una política de caducitat i comprovar-ne l'efecte
