@@ -33,7 +33,7 @@ Fes clic a qualsevol dels apartats per accedir a la documentació extensa i les 
 * **Guia d'estudi:** Domina les eines de consola `getfacl` i `setfacl`, la modificació de permisos per usuari/grup (`-m`), l'eliminació (`-x`/`-b`) i els permisos per defecte (`-d`).
 
 ### 🪟 7. [Llistes de Control d'Accés (ACL) a Windows](../ra3/acl_windows.md)
-* * Control d'accés detallat i permisos NTFS sobre fitxers i carpetes en entorns Windows.
+* Control d'accés detallat i permisos NTFS sobre fitxers i carpetes en entorns Windows.
 * **Guia d'estudi:** Revisa l'assignació de permisos des de la GUI (pestanya *Seguretat*), l'ús de la consola amb `icacls` (`/grant`, `/deny`, `/remove`), el concepte d'herència NTFS i la prioritat del *Deny* explícit.
 
 ---
