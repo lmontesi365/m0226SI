@@ -11,7 +11,7 @@ Els objectius fonamentals són garantir que la informació i els sistemes es man
 ### 1. Confidencialitat
 * **Definició:** Garantir que només les persones autoritzades poden acceder a la informació.
 
-??? example "🔍 Veure exemple pràctic de Confidencialitat"
+example "🔍 exemple Confidencialitat"
     Quan un sistema requereix usuari i contrasenya per accedir a dades personals, només les persones autoritzades podran veure aquesta informació.
     
     * **Exemple concret:** Els expedients mèdics d’un hospital només són consultables pel personal mèdic autoritzat.
@@ -19,7 +19,7 @@ Els objectius fonamentals són garantir que la informació i els sistemes es man
 ### 2. Integritat
 * **Definició:** Assegurar que la informació no sigui alterada o manipulada per persones no autoritzades i que es mantingui correcta i completa.
 
-??? example "🔍 Veure exemple pràctic d'Integritat"
+ example "🔍  exemple d'Integritat"
     Quan enviem un fitxer a través d’Internet, s’utilitza una suma de comprovació (*checksum*) per assegurar que el fitxer no ha estat modificat durant la transmissió.
     
     * **Exemple concret:** Si algú manipula una nota en un sistema d’avaluació escolar sense permís, s’està vulnerant la integritat.
@@ -27,7 +27,7 @@ Els objectius fonamentals són garantir que la informació i els sistemes es man
 ### 3. Disponibilitat
 * **Definició:** Garantir que la informació i els sistemes estiguin disponibles i accessibles quan els usuaris autoritzats ho necessitin.
 
-??? example "🔍 Veure exemple pràctic de Disponibilitat"
+ example "🔍 exemple Disponibilitat"
     Un servidor de correu electrònic ha d’estar en funcionament perquè els usuaris puguin enviar i rebre missatges sempre que ho requereixin.
 
 !!! danger "Amenaça Clau (DDoS)"
@@ -36,7 +36,7 @@ Els objectius fonamentals són garantir que la informació i els sistemes es man
 ### 4. No repudi
 * **Definició:** Assegurar que un usuari no pugui negar una acció que ha realitzat, com ara l’enviament d’un missatge o una transacció.
 
-??? example "🔍 Veure exemple pràctic de No Repudi"
+ example "🔍  exemple de No Repudi"
     Quan es signa digitalment un document, el signant no pot negar que ha realitzat aquella signatura.
     
     * **Exemple concret:** En un correu electrònic signat digitalment, l’emissor no pot negar de cap manera que l’ha enviat.
