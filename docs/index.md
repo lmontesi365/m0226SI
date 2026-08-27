@@ -15,7 +15,7 @@ Benvinguts al web d'apunts del mòdul. Aquí trobareu tota la informació organi
 ---
 
 ### 🚀 Últimes Actualitzacions M0226
-* **[15/06/2026]** Afegits els conceptes inicials del RA1.
+* **[15/08/2026]** Afegits els conceptes inicials del RA1.
 
 
 !!! info
