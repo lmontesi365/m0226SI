@@ -11,8 +11,7 @@ nav:
       - Índex F-L: ra1/seguretat-fisica-logica/index.md
       - Seguretat Física: ra1/seguretat-fisica-logica/seguretat-fisica.md
       - Seguretat Lògica: ra1/seguretat-fisica-logica/seguretat-logica.md
-    -SAI:
-      - SAI: ra1/SAI.md
+    - SAI: ra1/SAI.md
     - CPD:
       - Índex CPD: ra1/cpd/index_cpd.md
       - Ubicació Geogràfica: ra1/cpd/ubicacio-geografica.md
