@@ -7,8 +7,8 @@ Benvinguts al web d'apunts del mòdul. Aquí trobareu tota la informació organi
 | Bloc | Descripció | Estat |
 | :--- | :--- | :--- |
 | **RA1** | Seguretat Passiva | [Anar al RA1 ➡️](./ra1/index_ra1.md) |🟢 Disponible |
-| **RA2** | Emmagatzematge de la informació | [Anar al RA2 ➡️](./ra2/index.md) | | 🟡 En procés |
-| **RA3** | Seguretat Activa | [Anar al RA3 ➡️](./ra3/index_ra3.md) | 🟡 En procés |
+| **RA2** | Emmagatzematge de la informació | [Anar al RA2 ➡️](./ra2/index_ra2.md) | | 🟡 En procés |
+| **RA3** | Seguretat Activa | [Anar al RA3 ➡️](./ra3/index_Ra3.md) | 🟡 En procés |
 | **RA4** | Seguretat a les xarxes informàtiques | 🟡 En procés |
 | **RA5** | Llei de protecció de dades | 🟡 En procés |
 
