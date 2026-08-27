@@ -131,7 +131,7 @@ En entorns corporatius amb Windows Server, s'instal·la el rol **AD CS** per cre
 
 ---
 
-## 🧪 Pràctica Guiada per a l'Alumnat
+## 🧪 Pràctica Guiada
 
 ```bash
 # 1. Generar un certificat autofirmat de prova a Linux amb OpenSSL
