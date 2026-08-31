@@ -4,35 +4,33 @@ theme:
 
 nav:
   - Inicio: index.md
-  - RA1: 
-    - index RA1: ra1/index_ra1.md
-    - Conceptes Generals: ra1/conceptos.md
-    - Seguretat Física i Lògica:
-      - Índex F-L: ra1/seguretat-fisica-logica/index.md
-      - Seguretat Física: ra1/seguretat-fisica-logica/seguretat-fisica.md
-      - Seguretat Lògica: ra1/seguretat-fisica-logica/seguretat-logica.md
-    - SAI: ra1/SAI.md
-    - CPD:
-      - Índex CPD: ra1/cpd/index_cpd.md
-      - Ubicació Geogràfica: ra1/cpd/ubicacio-geografica.md
-      - Ubicació Edifici: ra1/cpd/ubicacio-edifici.md
-      - Infraestructura Tècnica: ra1/cpd/infraestructura-tecnica.md
-      - Checklist: ra1/cpd/checklist.md
-    - ACL Windows: ra3/acl/acl_windows.md
-    - ACL Linux: ra3/acl/acl_linux.md
+  - RA1:
+      - index RA1: ra1/index_ra1.md
+      - Conceptes Generals: ra1/conceptos.md
+      - Seguretat Física i Lògica:
+          - Índex F-L: ra1/seguretat-fisica-logica/index.md
+          - Seguretat Física: ra1/seguretat-fisica-logica/seguretat-fisica.md
+          - Seguretat Lògica: ra1/seguretat-fisica-logica/seguretat-logica.md
+      - SAI: ra1/SAI.md
+      - CPD:
+          - Índex CPD: ra1/cpd/index_cpd.md
+          - Ubicació Geogràfica: ra1/cpd/ubicacio-geografica.md
+          - Ubicació Edifici: ra1/cpd/ubicacio-edifici.md
+          - Infraestructura Tècnica: ra1/cpd/infraestructura-tecnica.md
+          - Checklist: ra1/cpd/checklist.md
   - RA2:
-    - index RA2: ra2/index_ra2.md
-    - Raid: ra2/raid.md
-    - Còpies de Seguretat: ra2/copies_seguretat.md
-    - Criptografia: ra2/cripto.md
-    - GPG: ra2/GPG.md
+      - index RA2: ra2/index_ra2.md
+      - Raid: ra2/raid.md
+      - Còpies de Seguretat: ra2/copies_seguretat.md
+      - Criptografia: ra2/cripto.md
+      - GPG: ra2/GPG.md
   - RA3:
-    - index RA3: ra3/index_Ra3.md
-    - Polítiques de Seguretat: ra3/politicas.md
-    - Certificat digital: ra3/certificat_digital.md
-    - Encriptació: ra3/encriptacio.md
-    - Antimalware: ra3/antimalware.md
-    - ACL Windows: ra3/acl/acl_windows.md
-    - ACL Linux: ra3/acl/acl_linux.md
-    - Autenticació: ra3/autenticacio.md
-    - Contrasenyes: ra3/contrasenyes.md
+      - index RA3: ra3/index_Ra3.md
+      - Polítiques de Seguretat: ra3/politicas.md
+      - Certificat digital: ra3/certificat_digital.md
+      - Encriptació: ra3/encriptacio.md
+      - Antimalware: ra3/antimalware.md
+      - ACL Windows: ra3/acl/acl_windows.md
+      - ACL Linux: ra3/acl/acl_linux.md
+      - Autenticació: ra3/autenticacio.md
+      - Contrasenyes: ra3/contrasenyes.md
