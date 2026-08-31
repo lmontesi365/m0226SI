@@ -57,14 +57,3 @@
 - [ ] Tests mensuals SAI
 
 ---
-
-## Observacions Finals
-
-**Signatura:** _________________ **Data:** __________
-
-**Estat:** ☐ Complert   ☐ Incomplet   ☐ Revisió necessària
-
-**Accions pendents:**
-1. _________________________________
-2. _________________________________
-3. _________________________________
