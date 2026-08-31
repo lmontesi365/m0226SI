@@ -17,7 +17,7 @@ Conjunt de mesures i controls encaminats a protegir els equips, dispositius i in
 
 ### 1️⃣ **Control d'Accés**
 
-**Bones pràctiques:**
+ - **Bones pràctiques:**
 - Accés només a personal autoritzat
 - Doble autenticació per a sales críticas
 - Registre complet d'entrades/sortides
@@ -27,7 +27,7 @@ Conjunt de mesures i controls encaminats a protegir els equips, dispositius i in
 
 ### 2️⃣ **Vigilància i Detecció**
 
-**Implementació:**
+- **Implementació:**
 - Câmeres de 4K o superior
 - Almacenament mínim de 30 dies
 - Notificacions en temps real
@@ -37,7 +37,7 @@ Conjunt de mesures i controls encaminats a protegir els equips, dispositius i in
 
 ### 3️⃣ **Protecció de Servidors i Equipaments**
 
-**Gestió d'inventari:**
+- **Gestió d'inventari:**
 - Registre RFID de tots els equips
 - Codi de barres per a tracking
 - Localització física documentada
@@ -47,7 +47,7 @@ Conjunt de mesures i controls encaminats a protegir els equips, dispositius i in
 
 ### 4️⃣ **Protecció contra Incendis**
 
-**Protocol d'incendi:**
+- **Protocol d'incendi:**
 - Detectors connectats a central de control
 - Sistema d'alarma audible en tot l'edifici
 - Gas inert dispara automàticament a 50°C
@@ -58,7 +58,7 @@ Conjunt de mesures i controls encaminats a protegir els equips, dispositius i in
 
 ### 5️⃣ **Control Ambiental**
 
-**Especificacions tècniques:**
+- **Especificacions tècniques:**
 - **Temperatura:** 18-27°C (ideal 21°C)
 - **Humitat:** 30-55% (ideal 45%)
 - **Canvi d'aire:** Mínimo 15-20 renovacions/hora
@@ -71,20 +71,20 @@ Conjunt de mesures i controls encaminats a protegir els equips, dispositius i in
 
 #### 🔋 SAI (Sistemes d'Alimentació Ininterrompuda)
 
-**Dimensions del SAI:**
+- **Dimensions del SAI:**
 - Calcular: Total kW de servidors × 1.25 (marge)
 - Per exemple: 50 kW servidors → SAI 62.5 kVA
 
 #### 🛢️ Generador Diesel
 
-**Especificacions:**
+- **Especificacions:**
 - Capacitat mínim per 24 hores contínues
 - Test de funcionament mensual
 - Nivell de combustible controlat
 
 #### ⚡ Subministrament Elèctric Dual
 
-**Configuració:**
+- **Configuració:**
 - Dos subministres de xarxa elèctrica independents
 - Automatització de commutació (< 4ms)
 - Monitoratge continu de voltatge
@@ -93,7 +93,7 @@ Conjunt de mesures i controls encaminats a protegir els equips, dispositius i in
 
 ### 7️⃣ **Gestió Física de Dades**
 
-**Protocol de destrucció:**
+- **Protocol de destrucció:**
 - Discs durs: Destrucció física o degaussing
 - Certificat de destrucció
 - Cadena de custòdia documentada
