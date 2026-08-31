@@ -1,0 +1,1916 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../copies_seguretat/">
+      
+      
+        <link rel="next" href="../GPG/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Criptografia - M0226 - Seguretat Informàtica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#criptografia-i-integritat-de-les-dades" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-header__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            M0226 - Seguretat Informàtica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Criptografia
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-nav__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    M0226 - Seguretat Informàtica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/index_ra1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/conceptos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptes Generals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física i Lògica
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Seguretat Física i Lògica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex F-L
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/seguretat-fisica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/seguretat-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Lògica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/SAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CPD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/index_cpd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex CPD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/ubicacio-geografica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Geogràfica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/ubicacio-edifici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Edifici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/infraestructura-tecnica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infraestructura Tècnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_ra2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../copies_seguretat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Còpies de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Criptografia
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Criptografia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-conceptes-fonamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Conceptes Fonamentals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-funcions-hash-i-verificacio-dintegritat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Funcions Hash i Verificació d'Integritat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Funcions Hash i Verificació d&#39;Integritat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristiques-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Característiques principals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorismes-hash-mes-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorismes Hash Més Comuns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-practics-de-verificacio-dintegritat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples Pràctics de Verificació d'Integritat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples Pràctics de Verificació d&#39;Integritat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-linux-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En Linux (Bash)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En Windows (PowerShell)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tipus-de-xifratge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Tipus de Xifratge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Tipus de Xifratge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-xifrat-simetric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Xifrat Simètric
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. Xifrat Simètric">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemples-practics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples pràctics:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-xifrat-asimetric-clau-publica-privada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Xifrat Asimètric (Clau Pública / Privada)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Xifrat Asimètric (Clau Pública / Privada)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcionament-basat-en-el-proposit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionament basat en el propòsit:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-xifratge-hibrid-i-enllacos-segurs-tlshttps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Xifratge Híbrid i Enllaços Segurs (TLS/HTTPS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-infraestructura-de-clau-publica-pki-i-certificats-digitals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Infraestructura de Clau Pública (PKI) i Certificats Digitals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Infraestructura de Clau Pública (PKI) i Certificats Digitals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elements-principals-duna-pki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elements principals d'una PKI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-xifratge-en-repos-emmagatzematge-en-disc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Xifratge en Repòs (Emmagatzematge en Disc)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GPG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/index_Ra3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/politicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polítiques de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/certificat_digital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificat digital
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/encriptacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encriptació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/antimalware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antimalware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/acl/acl_windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/acl/acl_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/autenticacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/contrasenyes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrasenyes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-conceptes-fonamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Conceptes Fonamentals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-funcions-hash-i-verificacio-dintegritat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Funcions Hash i Verificació d'Integritat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Funcions Hash i Verificació d&#39;Integritat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristiques-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Característiques principals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorismes-hash-mes-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorismes Hash Més Comuns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-practics-de-verificacio-dintegritat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples Pràctics de Verificació d'Integritat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples Pràctics de Verificació d&#39;Integritat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-linux-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En Linux (Bash)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En Windows (PowerShell)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tipus-de-xifratge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Tipus de Xifratge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Tipus de Xifratge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-xifrat-simetric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Xifrat Simètric
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. Xifrat Simètric">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemples-practics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples pràctics:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-xifrat-asimetric-clau-publica-privada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Xifrat Asimètric (Clau Pública / Privada)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Xifrat Asimètric (Clau Pública / Privada)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcionament-basat-en-el-proposit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionament basat en el propòsit:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-xifratge-hibrid-i-enllacos-segurs-tlshttps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Xifratge Híbrid i Enllaços Segurs (TLS/HTTPS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-infraestructura-de-clau-publica-pki-i-certificats-digitals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Infraestructura de Clau Pública (PKI) i Certificats Digitals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Infraestructura de Clau Pública (PKI) i Certificats Digitals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elements-principals-duna-pki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elements principals d'una PKI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-xifratge-en-repos-emmagatzematge-en-disc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Xifratge en Repòs (Emmagatzematge en Disc)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="criptografia-i-integritat-de-les-dades">🔑 Criptografia i Integritat de les Dades</h1>
+<p>La <strong>criptografia</strong> i la <strong>verificació d'integritat</strong> són els pilars fonamentals per garantir la <strong>confidencialitat</strong>, l'<strong>autenticitat</strong> i la <strong>no alteració</strong> de la informació, tant en trànsit per la xarxa com en emmagatzematge (en disc).</p>
+<hr />
+<h2 id="1-conceptes-fonamentals">1. Conceptes Fonamentals</h2>
+<ul>
+<li><strong>Confidencialitat:</strong> Garanteix que només les persones autoritzades puguin llegir la informació. S'aconsegueix mitjançant el <strong>xifratge</strong>.</li>
+<li><strong>Integritat:</strong> Assegura que la informació no ha estat modificada, alterada o corrompuda (ja sigui per una fallada tècnica o per un atacant). S'aconsegueix mitjançant funcions <strong>Hash</strong> i <strong>signatures digitals</strong>.</li>
+<li><strong>Autenticitat:</strong> Confirma la identitat de l'emissor d'un missatge o del propietari d'un recurs.</li>
+<li><strong>No repudi:</strong> Impedeix que un emissor pugui negar haver enviat un missatge o realitzat una acció.</li>
+</ul>
+<hr />
+<h2 id="2-funcions-hash-i-verificacio-dintegritat">2. Funcions Hash i Verificació d'Integritat</h2>
+<p>Una funció <strong>Hash</strong> (o resum criptogràfic) és un algorisme matemàtic unidireccional que transforma qualsevol conjunt de dades d'entrada en una cadenes de caràcters de longitud fixa.</p>
+<h3 id="caracteristiques-principals">Característiques principals</h3>
+<ol>
+<li><strong>Unidireccional (<em>One-way</em>):</strong> És impossible obtenir el contingut original a partir del hash.</li>
+<li><strong>Efecte allau (<em>Avalanche effect</em>):</strong> Un canvi d'un sol bit en el document original produeix un hash completament diferent.</li>
+<li><strong>Resistència a col·lisions:</strong> Dos documents diferents no han de generar mai el mateix hash.</li>
+</ol>
+<h3 id="algorismes-hash-mes-comuns">Algorismes Hash Més Comuns</h3>
+<ul>
+<li><strong>MD5 / SHA-1:</strong> Desaconsellats per a ús de seguretat a causa de vulnerabilitats i col·lisions trobades. S'usen només per a comprovacions d'error simples.</li>
+<li><strong>SHA-256 / SHA-512 (Família SHA-2):</strong> Estàndard actual recomanat per a qualsevol entorn de producció.</li>
+<li><strong>SHA-3:</strong> Última generació d'algorismes hash dissenyats com a alternativa a SHA-2.</li>
+</ul>
+<hr />
+<h3 id="exemples-practics-de-verificacio-dintegritat">Exemples Pràctics de Verificació d'Integritat</h3>
+<h4 id="en-linux-bash">En Linux (Bash)</h4>
+<pre><code class="language-bash"># Calcular el hash SHA-256 d'un fitxer
+sha256sum document.pdf
+
+# Guardar el hash en un fitxer de comprovació
+sha256sum document.pdf &gt; document.pdf.sha256
+
+# Verificar la integritat del fitxer
+sha256sum -c document.pdf.sha256
+
+</code></pre>
+<h4 id="en-windows-powershell">En Windows (PowerShell)</h4>
+<pre><code class="language-powershell"># Calcular el hash SHA-256 d'un fitxer
+Get-FileHash -Path .\document.pdf -Algorithm SHA256
+
+# Comparar si un hash coincideix amb l'esperat
+(Get-FileHash -Path .\document.pdf -Algorithm SHA256).Hash -eq &quot;HASH_ESPERAT_EN_MAJUSCULES&quot;
+
+</code></pre>
+<hr />
+<h2 id="3-tipus-de-xifratge">3. Tipus de Xifratge</h2>
+<pre><code>                            ┌─────────────────────────────────┐
+                            │    Tipus de Criptografia        │
+                            └────────────────┬────────────────┘
+                                             │
+                    ┌────────────────────────┴────────────────────────┐
+                    ▼                                                 ▼
+        ┌───────────────────────┐                         ┌───────────────────────┐
+        │   Xifrat Simètric     │                         │  Xifrat Asimètric     │
+        │ (Clau compartida)     │                         │ (Clau pública/privada)│
+        └───────────┬───────────┘                         └───────────┬───────────┘
+                    │                                                 │
+            ┌───────┴───────┐                                 ┌───────┴───────┐
+            ▼               ▼                                 ▼               ▼
+         Ràpid       Una sola clau                         Llent        Dos claus
+       (AES-256)    per xifrar/desxifrar                  (RSA, ECC)    (Pública / Privada)
+
+</code></pre>
+<hr />
+<h3 id="a-xifrat-simetric">A. Xifrat Simètric</h3>
+<p>Usa la <strong>mateixa clau secreta</strong> tant per xifrar com per desxifrar la informació.</p>
+<ul>
+<li><strong>Avantatges:</strong> Molt ràpid i eficient per a grans volums de dades.</li>
+<li><strong>Inconvenients:</strong> El problema principal és com intercanviar la clau secreta de forma segura entre les parts.</li>
+<li><strong>Algorismes principals:</strong> <strong>AES</strong> (AES-128, AES-256), ChaCha20. <em>(Desaconsellats: DES, 3DES, RC4)</em>.</li>
+</ul>
+<h4 id="exemples-practics">Exemples pràctics:</h4>
+<ul>
+<li><strong>Linux (OpenSSL):</strong></li>
+</ul>
+<pre><code class="language-bash"># Xifrar un fitxer amb AES-256
+openssl enc -aes-256-cbc -salt -in dades.txt -out dades.enc -pbkdf2
+
+# Desxifrar el fitxer
+openssl enc -d -aes-256-cbc -in dades.enc -out dades_desxifrades.txt -pbkdf2
+
+</code></pre>
+<hr />
+<h3 id="b-xifrat-asimetric-clau-publica-privada">B. Xifrat Asimètric (Clau Pública / Privada)</h3>
+<p>Utilitza un parell de claus matemàticament relacionades:</p>
+<ol>
+<li><strong>Clau Pública:</strong> Es pot compartir amb tothom. S'utilitza per <strong>xifrar</strong> el missatge o per <strong>verificar</strong> una signatura.</li>
+<li>
+<p><strong>Clau Privada:</strong> És secreta i només la té el propietari. S'utilitza per <strong>desxifrar</strong> el missatge o per <strong>signar</strong>.</p>
+</li>
+<li>
+<p><strong>Avantatges:</strong> Resol el problema de la distribució de claus.</p>
+</li>
+<li><strong>Inconvenients:</strong> Computacionalment molt més lent que el xifrat simètric.</li>
+<li><strong>Algorismes principals:</strong> <strong>RSA</strong> (mínim 2048 o 4096 bits), <strong>ECC</strong> (Criptografia de Corba El·líptica).</li>
+</ol>
+<h4 id="funcionament-basat-en-el-proposit">Funcionament basat en el propòsit:</h4>
+<table>
+<thead>
+<tr>
+<th>Objectiu</th>
+<th>Qui xifra / signa?</th>
+<th>Amb quina clau?</th>
+<th>Qui desxifra / verifica?</th>
+<th>Amb quina clau?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Confidencialitat</strong></td>
+<td>Emissor</td>
+<td>Clau <strong>Pública</strong> del destinatari</td>
+<td>Destinatari</td>
+<td>Clau <strong>Privada</strong> del destinatari</td>
+</tr>
+<tr>
+<td><strong>Autenticitat / Signatura</strong></td>
+<td>Emissor</td>
+<td>Clau <strong>Privada</strong> de l'emissor</td>
+<td>Destinatari</td>
+<td>Clau <strong>Pública</strong> de l'emissor</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-xifratge-hibrid-i-enllacos-segurs-tlshttps">4. Xifratge Híbrid i Enllaços Segurs (TLS/HTTPS)</h2>
+<p>A la pràctica, els sistemes reals (com el protocol HTTPS/TLS, SSH o VPNs) no utilitzen únicament un tipus de xifratge, sinó que <strong>combinen tots dos</strong>:</p>
+<ol>
+<li>S'utilitza <strong>Criptografia Asimètrica (RSA/ECC)</strong> per autenticar el servidor i intercanviar de forma segura una clau de sessió temporal.</li>
+<li>Un cop establerta la clau temporal, es passa a utilitzar <strong>Criptografia Simètrica (AES)</strong> per xifrar tot el trànsit de dades (per la seva velocitat).</li>
+<li>S'apliquen <strong>Funcions Hash (SHA-256)</strong> per assegurar que cap paquet de dades ha estat alterat durant el trànsit.</li>
+</ol>
+<hr />
+<h2 id="5-infraestructura-de-clau-publica-pki-i-certificats-digitals">5. Infraestructura de Clau Pública (PKI) i Certificats Digitals</h2>
+<p>Una <strong>PKI (Public Key Infrastructure)</strong> és l'ecosistema de maquinari, programari, polítiques i procediments necessaris per crear, gestionar, distribuir, utilitzar i revocar certificats digitals.</p>
+<h3 id="elements-principals-duna-pki">Elements principals d'una PKI</h3>
+<ul>
+<li><strong>CA (Certifying Authority / Autoritat de Certificació):</strong> Entitat de confiança (p. ex., <em>Let's Encrypt</em>, <em>DigiCert</em>, <em>FNMT</em>) que signa digitalment i valida els certificats associant una clau pública a una identitat real.</li>
+<li><strong>RA (Registration Authority / Autoritat de Registre):</strong> Verifica la identitat dels sol·licitants abans que la CA emeti el certificat.</li>
+<li><strong>CRL (Certificate Revocation List) / OCSP:</strong> Llistes o protocols de consulta en temps real per comprovar si un certificat ha estat revocat abans de la seva data d'expiració.</li>
+<li><strong>Certificat Digital (Estàndard X.509):</strong> Document digital que conté la clau pública, informació del titular, data de caducitat i la signatura de la CA.</li>
+</ul>
+<hr />
+<h2 id="6-xifratge-en-repos-emmagatzematge-en-disc">6. Xifratge en Repòs (Emmagatzematge en Disc)</h2>
+<p>A part de xifrar les comunicacions per la xarxa, cal protegir les dades quan estan emmagatzemades en disc (<em>Data at Rest</em>):</p>
+<ul>
+<li><strong>Linux (LUKS / dm-crypt):</strong> Estàndard per al xifratge de volums i particions completes en sistemes GNU/Linux.</li>
+<li><strong>Windows (BitLocker):</strong> Característica integrada en Windows per xifrar discs de sistema i unitats d'emmagatzematge secundàries o USBs.</li>
+<li><strong>Eines Multiplataforma (VeraCrypt):</strong> Programari de codi obert per crear contenidors o volums xifrats en qualsevol sistema operatiu.</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

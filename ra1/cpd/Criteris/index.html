@@ -1,0 +1,1580 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Criteris - M0226 - Seguretat Informàtica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#criteris-de-disseny-i-ubicacio-per-a-la-sala-de-servidors-cpd" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="M0226 - Seguretat Informàtica" class="md-header__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            M0226 - Seguretat Informàtica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Criteris
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="M0226 - Seguretat Informàtica" class="md-nav__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    M0226 - Seguretat Informàtica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index_ra1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptes Generals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física i Lògica
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Seguretat Física i Lògica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguretat-fisica-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex F-L
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguretat-fisica-logica/seguretat-fisica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seguretat-fisica-logica/seguretat-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Lògica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CPD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_cpd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex CPD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubicacio-geografica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Geogràfica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubicacio-edifici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Edifici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infraestructura-tecnica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infraestructura Tècnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra2/index_ra2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra2/raid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra2/copies_seguretat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Còpies de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra2/cripto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Criptografia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra2/GPG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra3/index_Ra3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra3/politicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polítiques de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra3/certificat_digital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificat digital
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra3/encriptacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encriptació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra3/antimalware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antimalware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra3/acl/acl_windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra3/acl/acl_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra3/autenticacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra3/contrasenyes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrasenyes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-eleccio-de-ledifici-i-la-zona-geografica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Elecció de l’Edifici i la Zona Geogràfica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ubicacio-dins-del-mateix-edifici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Ubicació Dins del Mateix Edifici
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-climatitzacio-i-control-ambiental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Climatització i Control Ambiental
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-deteccio-i-extincio-dincendis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Detecció i Extinció d'Incendis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-seleccio-de-la-millor-ubicacio-sobre-planols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Pràctica: Selecció de la Millor Ubicació sobre Plànols
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Pràctica: Selecció de la Millor Ubicació sobre Plànols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pas-1-analisi-i-descarte-despais-als-planols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Pas 1: Anàlisi i Descarte d'Espais als Plànols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pas-2-matriu-davaluacio-de-candidats-exemple-dexercici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Pas 2: Matriu d'Avaluació de Candidats (Exemple d'Exercici)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<hr />
+<h1 id="criteris-de-disseny-i-ubicacio-per-a-la-sala-de-servidors-cpd">🏢 Criteris de Disseny i Ubicació per a la Sala de Servidors (CPD)</h1>
+<hr />
+<h2 id="1-eleccio-de-ledifici-i-la-zona-geografica">1. Elecció de l’Edifici i la Zona Geogràfica</h2>
+<ul>
+<li><strong>Evitar zones de risc natural:</strong> No ubicar la sala en àrees propenses a inundacions (rius, planes al·luvials), terratrèmols, huracans o qualsevol desastre natural recurrent a la regió.</li>
+<li><strong>Seguretat de l’entorn:</strong> Prioritzar edificis en zones amb baixos índexs de criminalitat per reduir el risc de robatoris o vandalisme.</li>
+<li><strong>Proximitat a riscos externs:</strong> Allunyar-se d’instal·lacions perilloses (benzineres, fàbriques químiques, magatzems de combustibles, zones industrials amb risc d’explosió o incendi).</li>
+<li><strong>Accés a subministraments:</strong> Escollir ubicacions amb accés fiable a electricitat, preferiblement amb redundància des de més d’una subestació. Verificar bona cobertura de proveïdors d’internet d’alta velocitat (fibra òptica amb rutes d'entrada redactades/diverses).</li>
+<li><strong>Accessibilitat per al personal autoritzat:</strong> Ha d’estar disponible les 24/7 per a tècnics i serveis d’emergència (bombers, policia).</li>
+</ul>
+<hr />
+<h2 id="2-ubicacio-dins-del-mateix-edifici">2. Ubicació Dins del Mateix Edifici</h2>
+<ul>
+<li><strong>Evitar plantes crítiques:</strong></li>
+<li><strong>Soterranis i plantes baixes:</strong> Risc d’inundació per pluges, riades o trencament de canonades generals, així com major humitat ambiental.</li>
+<li><strong>Últimes plantes:</strong> Risc de filtracions d'aigua per la coberta/teulada i major càrrega tèrmica solar directament sobre el sostre.</li>
+<li>
+<p><strong>Planta recomanada:</strong> Plantes intermèdies (ex. 2a o 3a planta segons l'edifici).</p>
+</li>
+<li>
+<p><strong>Ubicació discreta:</strong></p>
+</li>
+<li>Sala interior, <strong>sense finestres</strong> a l’exterior per evitar radiació solar directa i punts de vulnerabilitat d'intrusió.</li>
+<li>Allunyada de zones d'alt trànsit com recepcions, cafeteries, lavabos i passadissos principals.</li>
+<li>
+<p><strong>Sense senyalització evident:</strong> No rotular com a “Sala de Servidors” o “CPD” → usar identificadors neutres (ex. <em>Sala Tècnica 2.04</em>).</p>
+</li>
+<li>
+<p><strong>Accés logístic i de càrrega:</strong></p>
+</li>
+<li>Si els equips són molt pesats (racks de gran densitat, SAI/UPS, bateries), la sala ha de tenir accés directe mitjançant un muntacàrregues o ascensor d'alta capacitat de càrrega des del moll de descàrrega.</li>
+<li>
+<p>Les portes d'accés han de tenir una amplada i alçada suficients (mínim 1,20 m d'amplada per 2,10 m d'alçada).</p>
+</li>
+<li>
+<p><strong>Allunyada de fonts de perill intern:</strong></p>
+</li>
+<li><strong>Vibracions:</strong> Evitar la proximitat immediata a motors d'ascensors, molls de càrrega, sales de calderes o maquinària pesada.</li>
+<li><strong>Aigua i desaigües:</strong> No col·locar mai sota lavabos, cuines, terrasses o canonades de distribució d'aigua general.</li>
+<li>
+<p><strong>Interferències electromagnètiques (EMI):</strong> Lluny de transformadors d'alta tensió, antenes de radiocomunicació, quadres elèctrics generals o motors elèctrics de gran mida.</p>
+</li>
+<li>
+<p><strong>Consideracions estructurals:</strong></p>
+</li>
+<li><strong>Capacitat de càrrega del sòl (forjat):</strong> El sòl ha de suportar el pes concentrat dels racks, SAI/UPS i equips de Climatització (mínim recomanat: 750 a 1.000 kg/m²).</li>
+<li><strong>Alçada lliure suficient:</strong> Alçada mínima de 2,80 a 3,00 metres per permetre la instal·lació de sòl tècnic (30-50 cm), cablejat superior/safates, conductes de climatització i garantir un flux d’aire adequat.</li>
+</ul>
+<hr />
+<h2 id="3-climatitzacio-i-control-ambiental">3. Climatització i Control Ambiental</h2>
+<p>La climatització en una sala de servidors no cerca el confort humà, sinó mantenir l'equipament dins dels marges operatius de temperatura i humitat recomanats per l'estàndard <strong>ASHRAE</strong>.</p>
+<pre><code>  [ Unitat CRAC / CRAH ] ──► (Aire Fred sota Sòl Tècnic) ──► [ Passadís Fred ] ──► [ Racks ]
+                                                                                   │
+  [ Retorn d'Aire Calent ] ◄──────────────────────────────── [ Passadís Calent ] ◄──┘
+
+</code></pre>
+<ul>
+<li><strong>Gestió del Flux d'Aire (Passadissos Freds i Calents):</strong></li>
+<li><strong>Arquitectura de passadissos:</strong> Disposició dels racks cara a cara (fronts enfrontats absorbint aire fred) i esquena amb esquena (expulsant aire calent).</li>
+<li>
+<p><strong>Confinament de passadís:</strong> Confinar el passadís fred (o el calent) amb estructures de metacrilat/portes per evitar que l'aire fred es barregi amb el calent, millorant l'eficiència energètica fins a un 30%.</p>
+</li>
+<li>
+<p><strong>Paràmetres Ambientals Recomanats (ASHRAE):</strong></p>
+</li>
+<li><strong>Temperatura d'entrada als equips:</strong> Entre <strong>18 °C i 27 °C</strong> (idealment al voltant de 22 °C).</li>
+<li><strong>Humitat relativa:</strong> Entre el <strong>40% i el 60%</strong>.</li>
+<li><em>Humitat baixa (&lt; 30%):</em> Incrementa el risc d'descàrregues electroostàtiques (ESD).</li>
+<li>
+<p><em>Humitat alta (&gt; 60%):</em> Risc de condensació i corrosió en components electrònics.</p>
+</li>
+<li>
+<p><strong>Equips de Climatització de Precisió (CRAC / CRAH):</strong></p>
+</li>
+<li>Utilitzar unitats de climatització de precisió dissenyades per a funcionament continu <strong>24/7/365</strong>, capaces de controlar tant la temperatura com la humitat de manera exacta.</li>
+<li>
+<p><strong>Redundància N+1 o 2N:</strong> Garantir que si una unitat de climatització falla o entra en manteniment, les restants puguin refredar el 100% de la càrrega tèrmica de la sala.</p>
+</li>
+<li>
+<p><strong>Sòl Tècnic Elevat (<em>Raised Floor</em>):</strong></p>
+</li>
+<li>Instal·lació de rajoles sobre estructures metàl·liques a una alçada de 30 a 50 cm.</li>
+<li>Ús del buit del sòl tècnic (<em>plenum</em>) per a la distribució de l'aire fred impulsat des dels equips de climatització cap a les rajoles perforades del passadís fred.</li>
+</ul>
+<hr />
+<h2 id="4-deteccio-i-extincio-dincendis">4. Detecció i Extinció d'Incendis</h2>
+<p>El sistema de protecció contra incendis en un CPD ha de protegir els equips electrònics sense fer servir aigua (ja que l'aigua destruiria els equips i podria provocar curtcircuits).</p>
+<ul>
+<li><strong>Sistemes de Detecció Precoç (VESDA):</strong></li>
+<li><strong>Detecció per Aspiració d'Aire (VESDA):</strong> Sistema que mostra l'aire de la sala de forma contínua a través d'una xarxa de tubs perforats, capaç de detectar micro-partícules de fum abans que sigui visible la flama (<em>fase incipient del foc</em>).</li>
+<li>
+<p>detectors de fum i calor puntuals (en sostre i sota el sòl tècnic) com a sistema secundari de confirmació per creuament de senyals.</p>
+</li>
+<li>
+<p><strong>Sistemes d'Extinció per Gas d'Agents Nets:</strong></p>
+</li>
+<li><strong>Gasos Inerts (IG-55, IG-541, Nitrogen):</strong> Redueixen el percentatge d'oxigen a la sala per sota del nivell que manté la combustió (del 21% a l'12-14%), essent totalment segurs per a l'electrònica i sense residus.</li>
+<li>
+<p><strong>Sistemes de Gas Químic (Novec 1230 / FK-5-1-12, ECARO-25):</strong> Actuen per absorció tèrmica, no deixen residus i permeten una extinció en menys de 10 segons sense danyar la capa d'ozó.</p>
+</li>
+<li>
+<p><strong>Estructures i Resistència al Foc:</strong></p>
+</li>
+<li><strong>Murs i portes RF-120 / REI 120:</strong> Tota l'estructura de la sala ha de resistir el foc durant almenys 120 minuts.</li>
+<li><strong>Portes ignífugues i d'obertura cap a l'exterior:</strong> Amb barra antipànic i tancament automàtic.</li>
+<li>
+<p><strong>Segellat de passos de cables (<em>Firestop</em>):</strong> Tots els passos de canonades i cablejat a través de les parets o sostres han de ser segellats amb materials intumescents resistents al foc.</p>
+</li>
+<li>
+<p><strong>Integració amb el Sistema Elèctric (Disparador EPO):</strong></p>
+</li>
+<li>En activar-se l'extinció per gas, el sistema ha de tallar automàticament la climatització (per evitar extreure el gas) i desconnectar el subministrament elèctric dels racks mitjançant el botó d'Aturada d'Emergència (<em>EPO - Emergency Power Off</em>).</li>
+</ul>
+<hr />
+<h2 id="practica-seleccio-de-la-millor-ubicacio-sobre-planols">🧪 Pràctica: Selecció de la Millor Ubicació sobre Plànols</h2>
+<h3 id="objectiu">🎯 Objectiu</h3>
+<p>Analitzar el plànol d'un edifici corporatiu de 4 plantes i seleccionar l'espai idoni per ubicar-hi la nova Sala de Servidors aplicant la metodologia de descarte i matriu de valoració.</p>
+<hr />
+<h3 id="pas-1-analisi-i-descarte-despais-als-planols">📋 Pas 1: Anàlisi i Descarte d'Espais als Plànols</h3>
+<p>Davant d'un plànol d'edifici, realitza els descartes en el següent ordre:</p>
+<ol>
+<li><strong>Descarte de Plantes Extremes:</strong></li>
+<li>Marca en <strong>roig</strong> la Planta Baixa, Soterranis i l'Última Planta.</li>
+<li>
+<p><em>Filtre:</em> Resten només les plantes intermèdies (ex. Planta 2a).</p>
+</li>
+<li>
+<p><strong>Descarte de Zones Perimetrals i Humides:</strong></p>
+</li>
+<li>Talla les sales que tinguin parets exteriors amb finestres.</li>
+<li>
+<p>Elimina sales contigües o situades directament a sota de: lavabos, cuines/oficines, sales de calderes o terrasses.</p>
+</li>
+<li>
+<p><strong>Descarte per Riscos Electromagnètics i Vibracions:</strong></p>
+</li>
+<li>
+<p>Elimina sales contigües als buits dels ascensors, cambres de motors o la sala del quadre elèctric general de l'edifici.</p>
+</li>
+<li>
+<p><strong>Validació d'Accessibilitat Logística:</strong></p>
+</li>
+<li>Comprova des del plànol que des del moll de descàrrega hi ha un recorregut directe via muntacàrregues fins a la sala seleccionada sense escales ni passos estrets.</li>
+</ol>
+<hr />
+<h3 id="pas-2-matriu-davaluacio-de-candidats-exemple-dexercici">📊 Pas 2: Matriu d'Avaluació de Candidats (Exemple d'Exercici)</h3>
+<p>Suposem que al plànol de la <strong>Planta 2</strong> queden 3 sales candidates: <strong>Sala A</strong>, <strong>Sala B</strong> i <strong>Sala C</strong>. Avalua cada criteri de 1 a 5 punts:</p>
+<table>
+<thead>
+<tr>
+<th>Criteri</th>
+<th>Sala A (Façana Est)</th>
+<th>Sala B (Interior, costat lavabos)</th>
+<th>Sala C (Central Interior)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sense finestres a l'exterior</strong></td>
+<td>❌ 1 pt (Té finestres)</td>
+<td>🟢 5 pts</td>
+<td>🟢 5 pts</td>
+</tr>
+<tr>
+<td><strong>Distància a xarxes d'aigua/lavabos</strong></td>
+<td>🟢 5 pts</td>
+<td>❌ 1 pt (Lavabo a sobre)</td>
+<td>🟢 5 pts</td>
+</tr>
+<tr>
+<td><strong>Accés a muntacàrregues</strong></td>
+<td>🟡 3 pts</td>
+<td>🟢 5 pts</td>
+<td>🟢 4 pts</td>
+</tr>
+<tr>
+<td><strong>Absència de canonades/grans estructures</strong></td>
+<td>🟢 4 pts</td>
+<td>🟡 2 pts</td>
+<td>🟢 5 pts</td>
+</tr>
+<tr>
+<td><strong>Resistència del forjat / Càrrega</strong></td>
+<td>🟢 4 pts</td>
+<td>🟢 4 pts</td>
+<td>🟢 5 pts</td>
+</tr>
+<tr>
+<td><strong>PUNTUACIÓ TOTAL</strong></td>
+<td><strong>17 pts</strong></td>
+<td><strong>17 pts</strong></td>
+<td><strong>24 pts (GUANYADORA)</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Resultat de la pràctica:</strong> La <strong>Sala C</strong> és la ubicació ideal segons el plànol, ja que compleix el criteri de sala central interior, lliure de filtracions d'aigua, sense exposició solar directa i amb bona accessibilitat de càrrega.</p>
+</blockquote>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

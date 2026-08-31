@@ -1,0 +1,1803 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../politicas/">
+      
+      
+        <link rel="next" href="../encriptacio/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Certificat digital - M0226 - Seguretat Informàtica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#certificats-digitals-i-infraestructura-de-clau-publica-pki" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-header__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            M0226 - Seguretat Informàtica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Certificat digital
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-nav__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    M0226 - Seguretat Informàtica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/index_ra1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/conceptos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptes Generals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física i Lògica
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Seguretat Física i Lògica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex F-L
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/seguretat-fisica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/seguretat-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Lògica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/SAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CPD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/index_cpd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex CPD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/ubicacio-geografica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Geogràfica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/ubicacio-edifici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Edifici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/infraestructura-tecnica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infraestructura Tècnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/index_ra2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/raid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/copies_seguretat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Còpies de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/cripto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Criptografia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/GPG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_Ra3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../politicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polítiques de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificat digital
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificat digital
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptes-clau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Conceptes Clau
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificats-digitals-a-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐧 Certificats Digitals a Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐧 Certificats Digitals a Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-generacio-duna-ca-propia-i-parell-de-claus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Generació d'una CA pròpia i parell de claus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creacio-duna-sollicitud-csr-i-signatura-del-certificat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Creació d'una sol·licitud CSR i signatura del certificat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-installacio-de-certificats-al-magatzem-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Instal·lació de certificats al magatzem del sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-conversio-de-formats-amb-openssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Conversió de formats amb OpenSSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificats-digitals-a-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪟 Certificats Digitals a Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪟 Certificats Digitals a Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gestor-de-certificats-del-sistema-certmgrmsc-i-certlmmsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Gestor de Certificats del Sistema (certmgr.msc i certlm.msc)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-gestio-amb-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Gestió amb PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-active-directory-certificate-services-ad-cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Active Directory Certificate Services (AD CS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taula-comparativa-linux-vs-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Taula Comparativa: Linux vs Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-guiada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Pràctica Guiada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-comprovacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Checklist de Comprovació
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../encriptacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encriptació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antimalware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antimalware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acl/acl_windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acl/acl_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autenticacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contrasenyes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrasenyes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptes-clau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Conceptes Clau
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificats-digitals-a-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐧 Certificats Digitals a Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐧 Certificats Digitals a Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-generacio-duna-ca-propia-i-parell-de-claus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Generació d'una CA pròpia i parell de claus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creacio-duna-sollicitud-csr-i-signatura-del-certificat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Creació d'una sol·licitud CSR i signatura del certificat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-installacio-de-certificats-al-magatzem-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Instal·lació de certificats al magatzem del sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-conversio-de-formats-amb-openssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Conversió de formats amb OpenSSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificats-digitals-a-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪟 Certificats Digitals a Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪟 Certificats Digitals a Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gestor-de-certificats-del-sistema-certmgrmsc-i-certlmmsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Gestor de Certificats del Sistema (certmgr.msc i certlm.msc)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-gestio-amb-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Gestió amb PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-active-directory-certificate-services-ad-cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Active Directory Certificate Services (AD CS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taula-comparativa-linux-vs-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Taula Comparativa: Linux vs Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-guiada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Pràctica Guiada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-comprovacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Checklist de Comprovació
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="certificats-digitals-i-infraestructura-de-clau-publica-pki">📜 Certificats Digitals i Infraestructura de Clau Pública (PKI)</h1>
+<p>Els <strong>certificats digitals</strong> s'utilitzen per autenticar la identitat d'equips, usuaris o serveis i per xifrar les comunicacions en xarxa (com HTTPS, TLS/SSL o IPsec). Es basen en la <strong>criptografia asimètrica</strong>, utilitzant un parell de claus (una de pública i una de privada).</p>
+<hr />
+<h2 id="conceptes-clau">📚 Conceptes Clau</h2>
+<ul>
+<li><strong>CA (Certificate Authority):</strong> Entitat de Certificació encarregada d'emetre, signar i revocar certificats.</li>
+<li><strong>CSR (Certificate Signing Request):</strong> Sol·licitud formal que conté la clau pública i les dades de l'entitat per demanar la signatura d'una CA.</li>
+<li><strong>Formats habituals:</strong></li>
+<li><code>.crt</code> / <code>.pem</code>: Formats codificats en ASCII Base64 molt utilitzats en Linux/Apache/Nginx.</li>
+<li><code>.pfx</code> / <code>.p12</code>: Formats binaris (PKCS#12) que inclouen tant el certificat com la clau privada (protegits per contrasenya), molt utilitzats en Windows.</li>
+</ul>
+<hr />
+<h2 id="certificats-digitals-a-linux">🐧 Certificats Digitals a Linux</h2>
+<p>A Linux, l'eina de referència per gestionar claus i certificats és <strong>OpenSSL</strong>.</p>
+<h3 id="1-generacio-duna-ca-propia-i-parell-de-claus">1. Generació d'una CA pròpia i parell de claus</h3>
+<pre><code class="language-bash"># 1. Generar la clau privada de la CA
+openssl genrsa -out ca.key 4096
+
+# 2. Generar el certificat autofirmat de la CA (vàlid per 3650 dies)
+openssl req -x509 -new -nodes -key ca.key -sha256 -days 3650 -out ca.crt
+
+</code></pre>
+<h3 id="2-creacio-duna-sollicitud-csr-i-signatura-del-certificat">2. Creació d'una sol·licitud CSR i signatura del certificat</h3>
+<pre><code class="language-bash"># 1. Generar la clau privada del servidor
+openssl genrsa -out servidor.key 2048
+
+# 2. Crear la sol·licitud de signatura (CSR)
+openssl req -new -key servidor.key -out servidor.csr
+
+# 3. Signar el certificat del servidor amb la nostra CA
+openssl x509 -req -in servidor.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out servidor.crt -days 365 -sha256
+
+</code></pre>
+<h3 id="3-installacio-de-certificats-al-magatzem-del-sistema">3. Instal·lació de certificats al magatzem del sistema</h3>
+<p>Perquè el sistema operatiu confiï en una CA pròpia o corporativa:</p>
+<ul>
+<li><strong>Ubuntu / Debian:</strong></li>
+</ul>
+<pre><code class="language-bash">sudo cp ca.crt /usr/local/share/ca-certificates/la_meva_ca.crt
+sudo update-ca-certificates
+
+</code></pre>
+<ul>
+<li><strong>RHEL / CentOS / Rocky Linux:</strong></li>
+</ul>
+<pre><code class="language-bash">sudo cp ca.crt /etc/pki/ca-trust/source/anchors/
+sudo update-ca-trust
+
+</code></pre>
+<h3 id="4-conversio-de-formats-amb-openssl">4. Conversió de formats amb OpenSSL</h3>
+<pre><code class="language-bash"># Convertir de PEM (.crt + .key) a PKCS#12 (.pfx per a Windows)
+openssl pkcs12 -export -out certificat.pfx -inkey servidor.key -in servidor.crt
+
+# Convertir de PFX (.pfx) a PEM (.crt + .key)
+openssl pkcs12 -in certificat.pfx -nocerts -out clau_privada.key
+openssl pkcs12 -in certificat.pfx -clcerts -nokeys -out certificat.crt
+
+</code></pre>
+<hr />
+<h2 id="certificats-digitals-a-windows">🪟 Certificats Digitals a Windows</h2>
+<p>A Windows, la gestió de certificats es realitza mitjançant interfícies gràfiques, eines de línia de comandes i serveis de domini.</p>
+<h3 id="1-gestor-de-certificats-del-sistema-certmgrmsc-i-certlmmsc">1. Gestor de Certificats del Sistema (<code>certmgr.msc</code> i <code>certlm.msc</code>)</h3>
+<ul>
+<li><strong><code>certmgr.msc</code>:</strong> Obre el magatzem de certificats de l'<strong>usuari actual</strong>.</li>
+<li><strong><code>certlm.msc</code>:</strong> Obre el magatzem de certificats de la <strong>màquina local</strong> (<em>Local Machine</em>).</li>
+</ul>
+<p><strong>Estructura principal del magatzem:</strong></p>
+<ul>
+<li><strong>Personal:</strong> Certificats d'usuari o de l'equip utilitzats per autenticació o xifrat.</li>
+<li><strong>Entitats d'autenticació arrel de confiança:</strong> Certificats de les CA en les quals l'equip confia plenament.</li>
+</ul>
+<h3 id="2-gestio-amb-powershell">2. Gestió amb PowerShell</h3>
+<pre><code class="language-powershell"># 1. Llistar els certificats instal·lats a la màquina local
+Get-ChildItem -Path Cert:\LocalMachine\My
+
+# 2. Crear un certificat autofirmat per a proves
+New-SelfSignedCertificate -DnsName &quot;servidor.local&quot; -CertStoreLocation &quot;Cert:\LocalMachine\My&quot;
+
+# 3. Exportar un certificat amb clau privada a format PFX
+$Cert = Get-ChildItem -Path Cert:\LocalMachine\My\THUMBPRINT_DEL_CERTIFICAT$Pwd = ConvertTo-SecureString -String &quot;LaSevaContrasenya123&quot; -Force -AsPlainText
+Export-PfxCertificate -Cert $Cert -FilePath &quot;C:\certificats\servidor.pfx&quot; -Password $Pwd
+
+# 4. Importar un certificat a la màquina local
+Import-PfxCertificate -FilePath &quot;C:\certificats\servidor.pfx&quot; -CertStoreLocation &quot;Cert:\LocalMachine\My&quot; -Password $Pwd
+
+</code></pre>
+<h3 id="3-active-directory-certificate-services-ad-cs">3. Active Directory Certificate Services (AD CS)</h3>
+<p>En entorns corporatius amb Windows Server, s'instal·la el rol <strong>AD CS</strong> per crear una PKI integrada a Active Directory:</p>
+<ul>
+<li><strong>Emissió automàtica (<em>Autoenrollment</em>):</strong> Permet distribuir certificats d'usuari i d'equip automàticament mitjançant directives de grup (GPO).</li>
+<li><strong>Plantilles de certificats:</strong> Defineixen els permisos, el període de validesa i els usos admesos (ex. Autenticació d'equip, SSL/TLS web, signatura de codi).</li>
+</ul>
+<hr />
+<h2 id="taula-comparativa-linux-vs-windows">📊 Taula Comparativa: Linux vs Windows</h2>
+<table>
+<thead>
+<tr>
+<th>Operació / Concepte</th>
+<th>Linux 🐧</th>
+<th>Windows 🪟</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Eina principal per línia de comandes</strong></td>
+<td><code>openssl</code></td>
+<td><code>certutil</code> / PowerShell (<code>Cert:\</code>)</td>
+</tr>
+<tr>
+<td><strong>Magatzem del sistema</strong></td>
+<td><code>/etc/ssl/certs/</code> o <code>/etc/pki/</code></td>
+<td>Console MMC (<code>certmgr.msc</code> / <code>certlm.msc</code>)</td>
+</tr>
+<tr>
+<td><strong>Formats habituals</strong></td>
+<td><code>.crt</code>, <code>.pem</code>, <code>.key</code></td>
+<td><code>.pfx</code>, <code>.p12</code>, <code>.cer</code></td>
+</tr>
+<tr>
+<td><strong>Actualitzar certificats de confiança</strong></td>
+<td><code>update-ca-certificates</code></td>
+<td>Desplegament per GPO o importació a <code>Cert:\LocalMachine\Root</code></td>
+</tr>
+<tr>
+<td><strong>PKI Corporativa</strong></td>
+<td>OpenSSL CA / Easy-RSA</td>
+<td>Active Directory Certificate Services (AD CS)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="practica-guiada">🧪 Pràctica Guiada</h2>
+<pre><code class="language-bash"># 1. Generar un certificat autofirmat de prova a Linux amb OpenSSL
+openssl req -x509 -newkey rsa:2048 -keyout prova.key -out prova.crt -days 365 -nodes
+
+# 2. Inspeccionar el contingut i les dates de validesa del certificat creat
+openssl x509 -in prova.crt -text -noout
+
+# 3. Convertir el certificat i la clau a format PKCS#12 (.pfx) per importar-lo a Windows
+openssl pkcs12 -export -out prova.pfx -inkey prova.key -in prova.crt
+
+</code></pre>
+<hr />
+<h2 id="checklist-de-comprovacio">✅ Checklist de Comprovació</h2>
+<ul>
+<li>[ ] Entesa la diferència entre clau pública, clau privada i certificat</li>
+<li>[ ] Domini del procés de creació d'una CSR i de signatura amb OpenSSL</li>
+<li>[ ] Saber instal·lar una CA d'arrel al magatzem de confiança (Linux i Windows)</li>
+<li>[ ] Capacitat per convertir formats de certificats (<code>.pem</code> ↔ <code>.pfx</code>)</li>
+<li>[ ] Ús de <code>certmgr.msc</code> i comandes PowerShell per a la gestió de certificats en Windows</li>
+</ul>
+<pre><code>
+
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

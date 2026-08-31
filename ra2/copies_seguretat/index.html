@@ -1,0 +1,1899 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../raid/">
+      
+      
+        <link rel="next" href="../cripto/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Còpies de Seguretat - M0226 - Seguretat Informàtica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#copies-de-seguretat-i-plans-de-recuperacio-backup-disaster-recovery" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-header__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            M0226 - Seguretat Informàtica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Còpies de Seguretat
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-nav__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    M0226 - Seguretat Informàtica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/index_ra1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/conceptos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptes Generals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física i Lògica
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Seguretat Física i Lògica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex F-L
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/seguretat-fisica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/seguretat-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Lògica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/SAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CPD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/index_cpd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex CPD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/ubicacio-geografica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Geogràfica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/ubicacio-edifici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Edifici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/infraestructura-tecnica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infraestructura Tècnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_ra2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Còpies de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Còpies de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#principis-fonamentals-i-lestrategia-3-2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 Principis Fonamentals i l'Estratègia 3-2-1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipus-de-copies-de-seguretat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Tipus de Còpies de Seguretat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Tipus de Còpies de Seguretat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-copia-completa-full-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Còpia Completa (Full Backup)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-copia-incremental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Còpia Incremental
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-copia-diferencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Còpia Diferencial
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taula-comparativa-dels-tipus-de-copia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Taula Comparativa dels Tipus de Còpia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copies-de-seguretat-a-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐧 Còpies de Seguretat a Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐧 Còpies de Seguretat a Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sincronitzacio-eficient-amb-rsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Sincronització eficient amb rsync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-empaquetat-i-compressio-amb-tar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Empaquetat i compressió amb tar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-automatitzacio-amb-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Automatització amb cron
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copies-de-seguretat-a-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪟 Còpies de Seguretat a Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪟 Còpies de Seguretat a Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sincronitzacio-de-fitxers-amb-robocopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Sincronització de fitxers amb robocopy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-imatges-de-sistema-amb-wbadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Imatges de sistema amb wbadmin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-instantanies-de-volum-vss-shadow-copies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Instantànies de Volum (VSS / Shadow Copies)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-guiada-per-a-lalumnat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Pràctica Guiada per a l'Alumnat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-comprovacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Checklist de Comprovació
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cripto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Criptografia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GPG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/index_Ra3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/politicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polítiques de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/certificat_digital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificat digital
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/encriptacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encriptació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/antimalware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antimalware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/acl/acl_windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/acl/acl_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/autenticacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/contrasenyes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrasenyes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#principis-fonamentals-i-lestrategia-3-2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 Principis Fonamentals i l'Estratègia 3-2-1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipus-de-copies-de-seguretat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Tipus de Còpies de Seguretat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Tipus de Còpies de Seguretat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-copia-completa-full-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Còpia Completa (Full Backup)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-copia-incremental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Còpia Incremental
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-copia-diferencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Còpia Diferencial
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taula-comparativa-dels-tipus-de-copia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Taula Comparativa dels Tipus de Còpia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copies-de-seguretat-a-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐧 Còpies de Seguretat a Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐧 Còpies de Seguretat a Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sincronitzacio-eficient-amb-rsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Sincronització eficient amb rsync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-empaquetat-i-compressio-amb-tar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Empaquetat i compressió amb tar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-automatitzacio-amb-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Automatització amb cron
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copies-de-seguretat-a-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪟 Còpies de Seguretat a Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪟 Còpies de Seguretat a Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sincronitzacio-de-fitxers-amb-robocopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Sincronització de fitxers amb robocopy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-imatges-de-sistema-amb-wbadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Imatges de sistema amb wbadmin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-instantanies-de-volum-vss-shadow-copies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Instantànies de Volum (VSS / Shadow Copies)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-guiada-per-a-lalumnat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Pràctica Guiada per a l'Alumnat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-comprovacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Checklist de Comprovació
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="copies-de-seguretat-i-plans-de-recuperacio-backup-disaster-recovery">📦 Còpies de Seguretat i Plans de Recuperació (Backup &amp; Disaster Recovery)</h1>
+<p>Les <strong>còpies de seguretat</strong> (<em>backups</em>) són la darrera línia de defensa en la seguretat informàtica. Permeten recuperar la informació i restablir els serveis davant de fallades de maquinari, atacs de programari maliciós (com el <em>ransomware</em>), errors humans o catàstrofes naturals.</p>
+<hr />
+<h2 id="principis-fonamentals-i-lestrategia-3-2-1">📐 Principis Fonamentals i l'Estratègia 3-2-1</h2>
+<p>Per garantir que les dades siguin realment recuperables, s'aplica l'estratègia <strong>3-2-1</strong>:</p>
+<ul>
+<li><strong>3 Còpies de les dades:</strong> La dada original en producció més dues còpies de seguretat addicionals.</li>
+<li><strong>2 Suports diferents:</strong> Emmagatzemar les còpies en mitjans físics o tecnològics diferents (ex: disc dur intern, NAS, cinta magnètica, disc extern).</li>
+<li><strong>1 Còpia fora de la instal·lació (<em>Off-site</em>):</strong> Salvar almenys una còpia en una ubicació física diferent o al núvol per protegir les dades en cas d'incendi o robatori.</li>
+</ul>
+<hr />
+<h2 id="tipus-de-copies-de-seguretat">📊 Tipus de Còpies de Seguretat</h2>
+<p><Image src="image_agent_tag_1933538191940240804" alt="Diagrama comparatiu de tipus de còpia de seguretat: Completa, Incremental i Diferencial" caption="Comparativa del funcionament de les còpies de seguretat" /></p>
+<hr />
+<h3 id="1-copia-completa-full-backup">1. Còpia Completa (<em>Full Backup</em>)</h3>
+<ul>
+<li><strong>Funcionament:</strong> Copia la totalitat de les dades seleccionades independentment de si s'han modificat o no.</li>
+<li><strong>Avantatges:</strong> Restauració molt simple i ràpida (només es requereix un sol conjunt de dades).</li>
+<li><strong>Inconvenients:</strong> Ocupa molt espai i requereix un temps d'execució elevat.</li>
+</ul>
+<h3 id="2-copia-incremental">2. Còpia Incremental</h3>
+<ul>
+<li><strong>Funcionament:</strong> Copia <strong>només les dades que han canviat des de l'última còpia de seguretat</strong> (sigui aquesta completa o incremental).</li>
+<li><strong>Avantatges:</strong> Molt ràpida de realitzar i ocupa molt poc espai de disc.</li>
+<li><strong>Inconvenients:</strong> La restauració és lenta i complexa, ja que requereix la còpia completa inicial i <strong>totes</strong> les còpies incrementals posteriors en ordre.</li>
+</ul>
+<h3 id="3-copia-diferencial">3. Còpia Diferencial</h3>
+<ul>
+<li><strong>Funcionament:</strong> Copia <strong>totes les dades que han canviat des de l'última còpia completa</strong>.</li>
+<li><strong>Avantatges:</strong> Restauració més ràpida que l'incremental (només es requereix la còpia completa i l'última diferencial).</li>
+<li><strong>Inconvenients:</strong> Ocupa més espai i triga més a fer-se a mesura que passa el temps respecte a l'última completa.</li>
+</ul>
+<hr />
+<h2 id="taula-comparativa-dels-tipus-de-copia">📋 Taula Comparativa dels Tipus de Còpia</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Característica</th>
+<th style="text-align: center;">Completa (<em>Full</em>)</th>
+<th style="text-align: center;">Incremental</th>
+<th style="text-align: center;">Diferencial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Temps d'execució</strong></td>
+<td style="text-align: center;">Molt lent</td>
+<td style="text-align: center;"><strong>Molt ràpid</strong></td>
+<td style="text-align: center;">Mitjà</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Espai ocupat</strong></td>
+<td style="text-align: center;">Molt alt</td>
+<td style="text-align: center;"><strong>Molt baix</strong></td>
+<td style="text-align: center;">Mitjà</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Complexitat de restauració</strong></td>
+<td style="text-align: center;"><strong>Molt senzilla</strong> (1 pas)</td>
+<td style="text-align: center;">Complexa (N passos)</td>
+<td style="text-align: center;">Senzilla (2 passos)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Risc en cas de fallada d'un fitxer</strong></td>
+<td style="text-align: center;">Baix</td>
+<td style="text-align: center;"><strong>Alt</strong> (si falla 1 incremental, es trenca la cadena)</td>
+<td style="text-align: center;">Baix</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="copies-de-seguretat-a-linux">🐧 Còpies de Seguretat a Linux</h2>
+<h3 id="1-sincronitzacio-eficient-amb-rsync">1. Sincronització eficient amb <code>rsync</code></h3>
+<p>L'eina <strong><code>rsync</code></strong> és el standard a Linux per realitzar còpies de seguretat gràcies a la seva capacitat de transferir només les diferències entre fitxers.</p>
+<pre><code class="language-bash"># Còpia incremental/sincronització mirenllant permisos i enllaços
+sudo rsync -avz --delete /var/www/html/ /mnt/backup/www/
+
+# Explicació d'opcions:
+# -a (archive): Preserva permisos, propietaris, dates i enllaços.
+# -v (verbose): Mostra el detall dels fitxers processats.
+# -z (compress): Comprimeix les dades durant la transferència.
+# --delete: Esborra al destinatari els fitxers eliminats a l'origen.
+
+</code></pre>
+<h3 id="2-empaquetat-i-compressio-amb-tar">2. Empaquetat i compressió amb <code>tar</code></h3>
+<p>Per generar fitxers d'arxiu puntuals comprimits:</p>
+<pre><code class="language-bash"># Crear un arxiu tar.gz del directori de configuració /etc
+sudo tar -cvzf /mnt/backup/etc_backup_$(date +%Y%m%d).tar.gz /etc
+
+# Extreure la còpia de seguretat en un directori de destinació
+sudo tar -xvzf /mnt/backup/etc_backup_20260826.tar.gz -C /tmp/restauracio/
+
+</code></pre>
+<h3 id="3-automatitzacio-amb-cron">3. Automatització amb <code>cron</code></h3>
+<p>Per executar les còpies de seguretat periòdicament:</p>
+<pre><code class="language-bash"># Editar la taula de tasques cron de l'usuari root
+sudo crontab -e
+
+# Afegir la següent línia per executar el backup cada dia a les 02:00 AM:
+0 2 * * * rsync -avz /home/usuari/documents/ /mnt/backup/documents/
+
+</code></pre>
+<hr />
+<h2 id="copies-de-seguretat-a-windows">🪟 Còpies de Seguretat a Windows</h2>
+<h3 id="1-sincronitzacio-de-fitxers-amb-robocopy">1. Sincronització de fitxers amb <code>robocopy</code></h3>
+<p><strong>Robocopy</strong> (<em>Robust File Copy</em>) és l'eina integrada en línia de comandes de Windows per a la gestió professional de backups.</p>
+<pre><code class="language-cmd">REM Copiar la carpeta de Projectes a una unitat externa mantenint permisos NTFS
+robocopy C:\Dades\Projectes E:\Backup\Projectes /MIR /COPYALL /R:3 /W:5 /LOG:C:\Logs\backup.log
+
+REM Explicació d'opcions:
+REM /MIR : Mode mirall (sincronitza canvis i esborra el que s'hagi eliminat a l'origen).
+REM /COPYALL : Copia tota la informació del fitxer (dades, atributs, permisos NTFS, AUDIT).
+REM /R:3 : Reintenta 3 vegades si un fitxer està bloquejat.
+REM /W:5 : Espera 5 segons entre reintentos.
+
+</code></pre>
+<h3 id="2-imatges-de-sistema-amb-wbadmin">2. Imatges de sistema amb <code>wbadmin</code></h3>
+<p>A entorns Windows Server i Windows 10/11, es pot utilitzar <strong><code>wbadmin</code></strong> per realitzar còpies de seguretat completes de l'estat del sistema (<em>Bare Metal Recovery</em>).</p>
+<pre><code class="language-cmd">REM Iniciar una còpia de seguretat de la unitat C: cap a la unitat E:
+wbadmin start backup -backupTarget:E: -include:C: -quiet
+
+</code></pre>
+<h3 id="3-instantanies-de-volum-vss-shadow-copies">3. Instantànies de Volum (<strong>VSS</strong> / <em>Shadow Copies</em>)</h3>
+<p>El servei <strong>VSS</strong> (<em>Volume Shadow Copy Service</em>) de Windows permet fer còpies de seguretat de fitxers fins i tot quan estan oberts o en ús per aplicacions (ex: bases de dades o arxius d'Outlook). També permet a l'usuari restaurar versions anteriors des de l'explorador de fitxers.</p>
+<hr />
+<h2 id="practica-guiada-per-a-lalumnat">🧪 Pràctica Guiada per a l'Alumnat</h2>
+<pre><code class="language-bash"># ==========================================
+# PRÀCTICA A LINUX (Script de Backup Incremental amb rsync i cron)
+# ==========================================
+
+# 1. Crear el directori per als scripts de backup
+mkdir -p ~/scripts
+
+# 2. Crear un script executable anomenat backup.sh
+cat &lt;&lt; 'EOF' &gt; ~/scripts/backup.sh
+#!/bin/bash
+ORIGEN=&quot;/home/usuari/dades/&quot;
+DESTI=&quot;/mnt/backup_disc/&quot;
+LOG=&quot;/var/log/backup_daily.log&quot;
+
+echo &quot;--- Inici de backup: $(date) ---&quot; &gt;&gt; $LOG
+rsync -avz --delete $ORIGEN $DESTI &gt;&gt;$LOG 2&gt;&amp;1
+echo &quot;--- Fi de backup: $(date) ---&quot; &gt;&gt; $LOG
+EOF
+
+# 3. Donar permisos d'execució a l'script
+chmod +x ~/scripts/backup.sh
+
+</code></pre>
+<pre><code class="language-powershell"># ==========================================
+# PRÀCTICA A WINDOWS (Script automatitzat amb PowerShell)
+# ==========================================
+
+# 1. Crear un script en PowerShell per copiar directori amb la data d'avui
+$Data = Get-Date -Format &quot;yyyy-MM-dd&quot;
+$Origen = &quot;C:\Dades&quot;
+$Desti = &quot;D:\Backups\Backup_$Data&quot;
+
+# 2. Executar la còpia amb Robocopy des de PowerShell
+Robocopy.exe $Origen $Desti /E /NP /LOG:&quot;D:\Backups\log_$Data.txt&quot;
+
+</code></pre>
+<hr />
+<h2 id="checklist-de-comprovacio">✅ Checklist de Comprovació</h2>
+<ul>
+<li>[ ] Comprensió i aplicació de la regla de backup <strong>3-2-1</strong></li>
+<li>[ ] Diferenciació clara entre còpia Completa, Incremental i Diferencial</li>
+<li>[ ] Domini de les eines <code>rsync</code> i <code>tar</code> a Linux per a la gestió de còpies</li>
+<li>[ ] Domini de les eines <code>robocopy</code> i <code>wbadmin</code> a Windows</li>
+<li>[ ] Ús i programació de tasques automàtiques amb <code>cron</code> (Linux) i el Programador de Tasques (Windows)</li>
+</ul>
+<p>```</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

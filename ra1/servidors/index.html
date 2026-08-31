@@ -1,0 +1,2175 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Centre de Processament de Dades (CPD) - Criteris d'Ubicació i Disseny - M0226 - Seguretat Informàtica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#centre-de-processament-de-dades-cpd-criteris-dubicacio-i-disseny" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-header__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            M0226 - Seguretat Informàtica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Centre de Processament de Dades (CPD) - Criteris d'Ubicació i Disseny
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-nav__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    M0226 - Seguretat Informàtica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_ra1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conceptos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptes Generals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física i Lògica
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Seguretat Física i Lògica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seguretat-fisica-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex F-L
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seguretat-fisica-logica/seguretat-fisica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seguretat-fisica-logica/seguretat-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Lògica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CPD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpd/index_cpd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex CPD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpd/ubicacio-geografica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Geogràfica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpd/ubicacio-edifici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Edifici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpd/infraestructura-tecnica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infraestructura Tècnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpd/checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/index_ra2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/raid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/copies_seguretat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Còpies de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/cripto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Criptografia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/GPG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/index_Ra3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/politicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polítiques de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/certificat_digital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificat digital
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/encriptacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encriptació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/antimalware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antimalware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/acl/acl_windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/acl/acl_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/autenticacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/contrasenyes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrasenyes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio-nou" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducció-Nou!!
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-eleccio-de-ledifici-i-la-zona-geografica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📍 Part 1: Elecció de l'Edifici i la Zona Geogràfica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📍 Part 1: Elecció de l&#39;Edifici i la Zona Geogràfica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-evitar-zones-de-risc-natural" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Evitar Zones de Risc Natural
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-seguretat-de-lentorn-criminalitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Seguretat de l'Entorn (Criminalitat)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-proximitat-a-installacions-perilloses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Proximitat a Instal·lacions Perilloses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-acces-a-subministraments-critics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Accés a Subministraments Crítics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Accés a Subministraments Crítics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#electricitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electricitat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aigua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aigua
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-accessibilitat-per-al-personal-i-emergencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Accessibilitat per al Personal i Emergències
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-ubicacio-dins-del-mateix-edifici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏢 Part 2: Ubicació dins del Mateix Edifici
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Part 2: Ubicació dins del Mateix Edifici">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-planta-on-ubicar-la-sala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Planta on Ubicar la Sala
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Planta on Ubicar la Sala">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plantes-a-evitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Plantes a Evitar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plantes-recomanades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Plantes Recomanades
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ubicacio-dins-del-pis-interior-vs-exterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Ubicació dins del Pis (Interior vs Exterior)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Ubicació dins del Pis (Interior vs Exterior)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sala-interior-recomanat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sala Interior (RECOMANAT ✅)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sala-exterior-evitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sala Exterior (EVITAR ❌)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-discrecio-i-ocultacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Discreció i Ocultació
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Discreció i Ocultació">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signalitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signalització
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubicacio-estrategica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubicació Estratègica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-acces-per-trasllat-de-material-pesant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Accés per Trasllat de Material Pesant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-allunyament-de-fonts-de-perill-interior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Allunyament de Fonts de Perill Interior
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Allunyament de Fonts de Perill Interior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vibracions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔊 Vibracions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aigua-i-fuites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💧 Aigua i Fuites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interferencies-electromagnetiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ Interferències Electromagnètiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-consideracions-estructurals-de-ledifici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Consideracions Estructurals de l'Edifici
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 Consideracions Estructurals de l&#39;Edifici">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capacitat-de-carrega-del-sol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Capacitat de Càrrega del Sòl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alcada-suficient-de-la-sala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📏 Alçada Suficient de la Sala
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aillament-termic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌡️ Aïllament Tèrmic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-infraestructura-tecnica-de-la-sala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Part 3: Infraestructura Tècnica de la Sala
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Part 3: Infraestructura Tècnica de la Sala">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-sistemes-de-climatitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Sistemes de Climatització
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-proteccio-contra-incendis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Protecció contra Incendis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-control-dacces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Control d'Accés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-saiups-alimentacio-ininterrompuda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 SAI/UPS (Alimentació Ininterrompuda)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-verificacio-per-a-cpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Checklist de Verificació per a CPD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Checklist de Verificació per a CPD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubicacio-geografica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✓ Ubicació Geogràfica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubicacio-dins-ledifici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✓ Ubicació dins l'Edifici
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infraestructura-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✓ Infraestructura Tècnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Conclusió
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="centre-de-processament-de-dades-cpd-criteris-dubicacio-i-disseny">Centre de Processament de Dades (CPD) - Criteris d'Ubicació i Disseny</h1>
+<h2 id="introduccio-nou">Introducció-Nou!!</h2>
+<p>Un Centre de Processament de Dades (CPD) o Data Center és la instal·lació física que allotja els servidors, dispositius de xarxa i sistemes de suport necessaris per a l'operació de sistemes informàtics. Ubicar-lo adequadament és crític per garantir disponibilitat, seguretat i rendiment.</p>
+<hr />
+<h2 id="part-1-eleccio-de-ledifici-i-la-zona-geografica">📍 Part 1: Elecció de l'Edifici i la Zona Geogràfica</h2>
+<h3 id="11-evitar-zones-de-risc-natural">1.1 Evitar Zones de Risc Natural</h3>
+<p><strong>Problemes:</strong></p>
+<ul>
+<li><strong>Inundacions</strong>: Zones prop de rius, plans al·luvials, àrees baixes</li>
+<li><strong>Terratrèmols</strong>: Regions sismicament actives</li>
+<li><strong>Huracans/Tempestes</strong>: Zones costaneres amb risc de vents violents</li>
+<li><strong>Nevades extremes</strong>: Zones de muntanya amb risc d'allissos</li>
+</ul>
+<p><strong>Recomanacions:</strong></p>
+<ul>
+<li>📊 Estudiar l'historial meteorològic dels últims 20-30 anys</li>
+<li>🗺️ Consultar mapes de riscos naturals de l'Agència de Protecció Civil</li>
+<li>📋 Verificar plans urbanístics per assegurar que la zona no serà inundable</li>
+<li>🏘️ Evitar zones de construcció recent (sòl potencialment inestable)</li>
+</ul>
+<h3 id="12-seguretat-de-lentorn-criminalitat">1.2 Seguretat de l'Entorn (Criminalitat)</h3>
+<p><strong>Problemes:</strong></p>
+<ul>
+<li><strong>Robatoris</strong> de dispositius i equipament</li>
+<li><strong>Vandalisme</strong> i sabotatge</li>
+<li><strong>Intents de trencament</strong> de la seguretat</li>
+</ul>
+<p><strong>Recomanacions:</strong></p>
+<ul>
+<li>📊 Investigar índexs de criminalitat del barri</li>
+<li>👮 Proximitat a commissaria de policia (idealment &lt; 5 km)</li>
+<li>🏢 Zona amb presència empresarial</li>
+<li>🚔 Patrulles de seguretat a la zona</li>
+</ul>
+<h3 id="13-proximitat-a-installacions-perilloses">1.3 Proximitat a Instal·lacions Perilloses</h3>
+<p><strong>Amenaces Externes:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Instal·lació</th>
+<th style="text-align: left;">Risc</th>
+<th style="text-align: left;">Distancia Mínima</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Benzineres</td>
+<td style="text-align: left;">Explosió, incendi</td>
+<td style="text-align: left;">&gt; 500 m</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fàbriques químiques</td>
+<td style="text-align: left;">Toxicitat, explosió</td>
+<td style="text-align: left;">&gt; 1 km</td>
+</tr>
+<tr>
+<td style="text-align: left;">Magatzems combustibles</td>
+<td style="text-align: left;">Incendi, explosió</td>
+<td style="text-align: left;">&gt; 1 km</td>
+</tr>
+<tr>
+<td style="text-align: left;">Zones industrials</td>
+<td style="text-align: left;">Vibració, contaminació</td>
+<td style="text-align: left;">&gt; 500 m</td>
+</tr>
+<tr>
+<td style="text-align: left;">Aeroports</td>
+<td style="text-align: left;">Crash aeri</td>
+<td style="text-align: left;">&gt; 10 km</td>
+</tr>
+<tr>
+<td style="text-align: left;">Línies ferroviàries</td>
+<td style="text-align: left;">Vibració</td>
+<td style="text-align: left;">&gt; 300 m</td>
+</tr>
+<tr>
+<td style="text-align: left;">Centrals elèctriques</td>
+<td style="text-align: left;">Radiació, EMF</td>
+<td style="text-align: left;">&gt; 500 m</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recomanacions:</strong></p>
+<ul>
+<li>📍 Ubicar en zona comercial o residencial tranquila</li>
+<li>🗺️ Consultar plànols urbans per identificar instal·lacions properes</li>
+<li>📞 Contactar amb autoritats per confirmar seguretat</li>
+</ul>
+<h3 id="14-acces-a-subministraments-critics">1.4 Accés a Subministraments Crítics</h3>
+<h4 id="electricitat">Electricitat</h4>
+<ul>
+<li><strong>Redundancia</strong>: Connexió a múltiples subestacions elèctriques</li>
+<li><strong>Tensió</strong>: Verificar estabilitat de voltatge</li>
+<li><strong>Capacitat</strong>: Suministre suficient per a demanda actual + creixement</li>
+<li><strong>Qualitat</strong>: Baixa taxa de talls (&lt; 99.5% interrupcions anuals)</li>
+</ul>
+<h4 id="internet">Internet</h4>
+<ul>
+<li><strong>Múltiples operadores</strong> (fibra òptica òptim)</li>
+<li><strong>Ample de banda</strong>: &gt; 1 Gbps (recomendable 10 Gbps)</li>
+<li><strong>SLA</strong>: 99.9% mínim de disponibilitat garantida</li>
+<li><strong>Cobertura</strong>: Diversos proveïdors</li>
+</ul>
+<h4 id="aigua">Aigua</h4>
+<ul>
+<li><strong>Accés fiable</strong> a abasteciment d'aigua</li>
+<li><strong>Qualitat</strong>: Baixa salinitat</li>
+<li><strong>Pressió</strong>: &gt; 2 bar</li>
+</ul>
+<h3 id="15-accessibilitat-per-al-personal-i-emergencies">1.5 Accessibilitat per al Personal i Emergències</h3>
+<p><strong>Requisits 24/7:</strong></p>
+<ul>
+<li>✅ Accés les 24 hores del dia, 7 dies per setmana</li>
+<li>✅ Tècnics TI disponibles en &lt; 30 minuts</li>
+<li>✅ Accés immediat per a bombers i policia</li>
+<li>✅ Via d'accés sense peatges ni restriccions</li>
+<li>✅ Aparcament per a vehicles d'emergència</li>
+</ul>
+<p><strong>Infraestructura:</strong></p>
+<ul>
+<li>🚗 Carreteres principals properes</li>
+<li>🚌 Accés a transports públics</li>
+<li>⛽ Serveis propers (gasolinera, etc.)</li>
+</ul>
+<hr />
+<h2 id="part-2-ubicacio-dins-del-mateix-edifici">🏢 Part 2: Ubicació dins del Mateix Edifici</h2>
+<h3 id="21-planta-on-ubicar-la-sala">2.1 Planta on Ubicar la Sala</h3>
+<h4 id="plantes-a-evitar">❌ Plantes a Evitar</h4>
+<p><strong>Soterranis:</strong></p>
+<ul>
+<li>💧 Alt risc d'inundació</li>
+<li>💨 Acumulació de humitat</li>
+<li>🦊 Accés més fàcil de vulnerar</li>
+<li>🚪 Menys sortides d'emergència</li>
+</ul>
+<p><strong>Plantes Baixes:</strong></p>
+<ul>
+<li>💧 Inundacions per aiguals</li>
+<li>🏃 Accessibilitat a vianants</li>
+<li>🚪 Portes exposades al carrer</li>
+</ul>
+<p><strong>Últimes Plantes:</strong></p>
+<ul>
+<li>💧 Filtracions d'aigua de pluja</li>
+<li>☀️ Escalfor excessiva (&gt; 35ºC)</li>
+<li>🌪️ Major exposició a vents</li>
+</ul>
+<h4 id="plantes-recomanades">✅ Plantes Recomanades</h4>
+<ul>
+<li><strong>Plantes intermedies</strong> (2a a 5a planta)</li>
+<li>Allunyades de cobertes i base</li>
+<li>Equilibri entre seguretat i accessibilitat</li>
+</ul>
+<h3 id="22-ubicacio-dins-del-pis-interior-vs-exterior">2.2 Ubicació dins del Pis (Interior vs Exterior)</h3>
+<h4 id="sala-interior-recomanat">Sala Interior (RECOMANAT ✅)</h4>
+<p><strong>Avantatges:</strong></p>
+<ul>
+<li>Sense finestres externes</li>
+<li>Menor risc d'accés</li>
+<li>Millor aïllament tèrmic</li>
+<li>Menor humitat de l'exterior</li>
+</ul>
+<p><strong>Ubicació ideal:</strong></p>
+<ul>
+<li>Al centre del pis</li>
+<li>Allunyada de façanes externes</li>
+<li>Enrevolada d'altres espais</li>
+</ul>
+<h4 id="sala-exterior-evitar">Sala Exterior (EVITAR ❌)</h4>
+<ul>
+<li>Finestres = risc d'accés</li>
+<li>Variacions extremes de temperatura</li>
+<li>Major evaporació</li>
+<li>Visible des del carrer</li>
+</ul>
+<h3 id="23-discrecio-i-ocultacio">2.3 Discreció i Ocultació</h3>
+<h4 id="signalitzacio">Signalització</h4>
+<ul>
+<li>❌ NO marcar com a "Sala de Servidors"</li>
+<li>✅ Noms neutres: "Sala Tècnica 01", "Magatzem"</li>
+<li>✅ Porta sense vidre transparent</li>
+<li>✅ Sense indicadors visuals de valor</li>
+</ul>
+<h4 id="ubicacio-estrategica">Ubicació Estratègica</h4>
+<ul>
+<li>🚫 NO pròxim a recepcions</li>
+<li>🚫 NO adjacent a cafeteries</li>
+<li>🚫 NO al costat de passadissos principals</li>
+<li>✅ Allunyada de flux de personal</li>
+<li>✅ Accés restringit addicional si possible</li>
+</ul>
+<h3 id="24-acces-per-trasllat-de-material-pesant">2.4 Accés per Trasllat de Material Pesant</h3>
+<p><strong>Problema</strong>: Servidors, racks i UPS pesen 200-500 kg</p>
+<p><strong>Solucions:</strong></p>
+<ul>
+<li>📦 Ascensor gran (mínim 2000 kg capacitat)</li>
+<li>🚪 Portes d'ascensor &gt; 1.2m d'ample</li>
+<li>📍 Muntacàrregues disponible</li>
+<li>🛤️ Passadissos amples per maniobra</li>
+<li>🪜 Porta de sala suficientment gran</li>
+<li>🔄 Corbes amples en passadissos</li>
+</ul>
+<h3 id="25-allunyament-de-fonts-de-perill-interior">2.5 Allunyament de Fonts de Perill Interior</h3>
+<h4 id="vibracions">🔊 Vibracions</h4>
+<p><strong>Problemes:</strong></p>
+<ul>
+<li>Dany en components electrònics</li>
+<li>Fallos en discs durs</li>
+<li>Desajustament de connexions</li>
+</ul>
+<p><strong>Evitar proximitat a:</strong></p>
+<ul>
+<li>🛗 Ascensors</li>
+<li>📦 Molls de càrrega</li>
+<li>⚙️ Maquinària de climatització</li>
+<li>🔩 Compressors d'aire comprimit</li>
+</ul>
+<p><strong>Distancia mínima</strong>: &gt; 10 metres</p>
+<h4 id="aigua-i-fuites">💧 Aigua i Fuites</h4>
+<p><strong>Problemes:</strong></p>
+<ul>
+<li>Electrocució del personal</li>
+<li>Corrosió de components</li>
+<li>Fallos en cascada de servidors</li>
+</ul>
+<p><strong>Evitar proximitat a:</strong></p>
+<ul>
+<li>🚰 Lavabos i banys</li>
+<li>🍳 Cuines i sales de menjar</li>
+<li>🔌 Canonades verticals</li>
+<li>🪟 Finestres en dies plujosos</li>
+</ul>
+<p><strong>Recomanacions:</strong></p>
+<ul>
+<li>NO col·locar servidors sota canonades</li>
+<li>Inspecció regular per humitat</li>
+<li>Sistema de detecció de fuites</li>
+</ul>
+<h4 id="interferencies-electromagnetiques">⚡ Interferències Electromagnètiques</h4>
+<p><strong>Problemes:</strong></p>
+<ul>
+<li>Corrupció de dades</li>
+<li>Falsos errors de xarxa</li>
+<li>Interferència en senyals</li>
+</ul>
+<p><strong>Evitar proximitat a:</strong></p>
+<ul>
+<li>🔌 Transformadors elèctrics</li>
+<li>📡 Antenes de comunicació</li>
+<li>⚙️ Motors elèctrics grans (&gt;3 kW)</li>
+<li>🔆 Línies d'alta tensió</li>
+</ul>
+<p><strong>Distancia mínima</strong>: &gt; 5-10 metres</p>
+<h3 id="26-consideracions-estructurals-de-ledifici">2.6 Consideracions Estructurals de l'Edifici</h3>
+<h4 id="capacitat-de-carrega-del-sol">🏗️ Capacitat de Càrrega del Sòl</h4>
+<p><strong>Problema</strong>: Servidors concentrats en poc espai</p>
+<p><strong>Càlculs aproximats:</strong></p>
+<ul>
+<li>Rack de servidors: 200-400 kg</li>
+<li>SAI/UPS: 100-300 kg</li>
+<li>Climatització: 50-200 kg</li>
+<li>Cablejat i altres: 50-100 kg</li>
+<li><strong>TOTAL</strong>: 500-1000 kg en ~20 m²</li>
+</ul>
+<p><strong>Recomanacions:</strong></p>
+<ul>
+<li>📊 Verificar càrrega admissible del sòl (500-1000 kg/m²)</li>
+<li>🔍 Inspecció estructural per enginyer</li>
+<li>🦶 Distribució uniforme de racks</li>
+<li>🛠️ Sòl tècnic elevat (millor distribució)</li>
+</ul>
+<h4 id="alcada-suficient-de-la-sala">📏 Alçada Suficient de la Sala</h4>
+<p><strong>Espai necessari:</strong></p>
+<ul>
+<li>Racks: 2-2.5 metres</li>
+<li>Sòl tècnic: 30-60 cm</li>
+<li>Climatització superior: 20-30 cm</li>
+<li>Cablejat en braguetes: 30-50 cm</li>
+<li><strong>ALTURA MÍNIMA</strong>: 3.5 metres</li>
+</ul>
+<p><strong>Beneficis:</strong></p>
+<ul>
+<li>✅ Millor circulació d'aire calent</li>
+<li>✅ Espai per cablejat</li>
+<li>✅ Flexibilitat per futurs upgrades</li>
+<li>✅ Millor ventilació</li>
+</ul>
+<h4 id="aillament-termic">🌡️ Aïllament Tèrmic</h4>
+<ul>
+<li>Parets i sostre ben aïllats</li>
+<li>Porta aïllada (no metàl·lica)</li>
+<li>Sense fuites d'aire</li>
+<li>Sellar forats per canonades i cables</li>
+</ul>
+<hr />
+<h2 id="part-3-infraestructura-tecnica-de-la-sala">🔧 Part 3: Infraestructura Tècnica de la Sala</h2>
+<h3 id="31-sistemes-de-climatitzacio">3.1 Sistemes de Climatització</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Aspecte</th>
+<th style="text-align: left;">Especificació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Temperatura</strong></td>
+<td style="text-align: left;">18-27 ºC (idealment 20-24 ºC)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Humitat relativa</strong></td>
+<td style="text-align: left;">40-55% (idealment 45-50%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Canvis/hora</strong></td>
+<td style="text-align: left;">&lt; 5 ºC</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Redundancia</strong></td>
+<td style="text-align: left;">Mínim 2 sistemes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Monitorització</strong></td>
+<td style="text-align: left;">Sensors continus amb alarma</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tipus:</strong></p>
+<ul>
+<li>🌀 AC de precisió: Refrigeració distribuïda uniforme</li>
+<li>🚀 Ventilació en cambra fria: Sòl tècnic amb aire fred</li>
+<li>🧊 Evaporadors: Per espais petits</li>
+</ul>
+<h3 id="32-proteccio-contra-incendis">3.2 Protecció contra Incendis</h3>
+<ul>
+<li>🚨 Detectores de fums automàtiques</li>
+<li>🧯 Sistemes d'extinció amb gas inert</li>
+<li>💨 Detecció de fums incident</li>
+<li>🚪 Compuertes tallafocs automàtiques</li>
+<li>📋 Pla d'evacuació clar</li>
+</ul>
+<h3 id="33-control-dacces">3.3 Control d'Accés</h3>
+<ul>
+<li>🔑 Acceso per tarjeta o biometria</li>
+<li>📹 Càmera de seguretat a la porta</li>
+<li>📊 Registre de tots els accessos</li>
+<li>🔔 Alarma sense autorització</li>
+</ul>
+<h3 id="34-saiups-alimentacio-ininterrompuda">3.4 SAI/UPS (Alimentació Ininterrompuda)</h3>
+<ul>
+<li>⏱️ Autonomia mínima: 10-15 minuts</li>
+<li>🔌 Connectat a sistemes crítics</li>
+<li>📈 Capacitat proporcional a demanda</li>
+<li>🔄 Prova mensual de transferència</li>
+</ul>
+<hr />
+<h2 id="checklist-de-verificacio-per-a-cpd">📋 Checklist de Verificació per a CPD</h2>
+<h3 id="ubicacio-geografica">✓ Ubicació Geogràfica</h3>
+<ul>
+<li>[ ] Zona sense desastres naturals</li>
+<li>[ ] Baixa criminalitat documentada</li>
+<li>[ ] Allunyada de instal·lacions perilloses</li>
+<li>[ ] Accés a electricitat redundant</li>
+<li>[ ] Internet de múltiples operadores</li>
+<li>[ ] Accés 24/7 per personal i emergències</li>
+</ul>
+<h3 id="ubicacio-dins-ledifici">✓ Ubicació dins l'Edifici</h3>
+<ul>
+<li>[ ] Planta intermedia (2a-5a planta)</li>
+<li>[ ] Sala interior sense finestres</li>
+<li>[ ] Allunyada de recepcions</li>
+<li>[ ] No senyalitzada externament</li>
+<li>[ ] Accés per muntacàrregues</li>
+<li>[ ] &gt; 10 m d'ascensors i molls</li>
+<li>[ ] &gt; 5-10 m de transformadors</li>
+<li>[ ] NO sota canonades ni banys</li>
+</ul>
+<h3 id="infraestructura-tecnica">✓ Infraestructura Tècnica</h3>
+<ul>
+<li>[ ] Climatització de precisió</li>
+<li>[ ] Temperatura 18-27 ºC</li>
+<li>[ ] Humitat 40-55%</li>
+<li>[ ] Detectores de fums i extinció</li>
+<li>[ ] Control d'accés físic</li>
+<li>[ ] Càmares 24/7</li>
+<li>[ ] SAI/UPS ≥ 15 min autonomia</li>
+<li>[ ] Sòl tècnic elevat</li>
+<li>[ ] Alçada ≥ 3.5 m</li>
+<li>[ ] Capacitat de càrrega verificada</li>
+</ul>
+<hr />
+<h2 id="conclusio">🎯 Conclusió</h2>
+<p>L'ubicació i el disseny d'un CPD és <strong>crítica per a la disponibilitat i seguretat</strong> de les operacions informàtiques. Una bona ubicació prevé la majoria de problemes físics.</p>
+<p><strong>Seleccionar correctament:</strong></p>
+<ul>
+<li>🌍 La zona geogràfica (riscos naturals baixos)</li>
+<li>🏢 La localització dins l'edifici (allunyada de perills)</li>
+<li>🔧 La infraestructura tècnica (climatització, seguretat, alimentació)</li>
+</ul>
+<p><strong>Recorda:</strong> Un centre de dades ben dissenyat és una inversió que es recupera en menys temps de funcionament sense incidents.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
