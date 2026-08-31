@@ -12,8 +12,8 @@ Aquest apartat detalla tots els sistemes crítics necessaris per mantenir els se
   - Prevenir el sobreescalfament del maquinari.
 **Control d'Humitat:**
   - Humitat relativa recomanada entre el **40% i el 60%**.
-  - ❌ Humitat < 40%: Risc de descàrregues d'electricitat estàtica.
-  - ❌ Humitat > 60%: Risc de condensació d'aigua sobre components elèctrics.
+    ❌ Humitat < 40%: Risc de descàrregues d'electricitat estàtica.
+    ❌ Humitat > 60%: Risc de condensació d'aigua sobre components elèctrics.
 **Disseny de Passadissos Fred / Calent:**
   - **Passadís Fred:** L'aire fred s'injecta pel terra tècnic a la part frontal dels *racks*.
   - **Passadís Calent:** L'aire calent s'expulsa per la part posterior i es recull al sostre.
@@ -30,8 +30,8 @@ Aquest apartat detalla tots els sistemes crítics necessaris per mantenir els se
 **Sistemes d'Extinció Neta (Sense Aigua):**
   - **Gasos Inerts:** Argonite o Inergen.
   - **Gasos Químics Sintètics:** Novec 1230 o FK-5-1-12.
-  - ✅ Extingeixen el foc reduint l'oxigen o la calor.
-  - ✅ No deixen residus ni danyen els equips electrònics.
+    ✅ Extingeixen el foc reduint l'oxigen o la calor.
+    ✅ No deixen residus ni danyen els equips electrònics.
 **Sectorització:**
   - Murs i portes amb resistència al foc de com a mínim **RF-120**.
 
