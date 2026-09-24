@@ -57,8 +57,8 @@ Fes clic a qualsevol dels apartats per accedir a la documentació extensa i les 
 | **Conceptes** | Teòric | Triada CID (Confidencialitat, Integritat, Disponibilitat) | [Anar ➡️](conceptos.md) |
 | **Seguretat Activa** | Teòric | Conjunt de mesures preventives | [Anar ➡️](activa_pasiva.md) |
 | **Seguretat Passiva** | Teòric | Conjunt de mesures de recuperació  | [Anar ➡️](activa_pasiva.md) |
-| **Seguretat Física** | Instal·lacions / Entorn | Protecció contra incendis, aigua i accesos | [Anar ➡️](seguretat_fisica.md) |
-| **Seguretat Lògica** | Software / Dades | Control d'accés digital i xifratge | [Anar ➡️](seguretat_logica.md) |
+| **Seguretat Física** | Instal·lacions / Entorn | Protecció contra incendis, aigua i accesos | [Anar ➡️](seguretat-fisica1.md) |
+| **Seguretat Lògica** | Software / Dades | Control d'accés digital i xifratge | [Anar ➡️](seguretat-logica.md) |
 | **CPD** | Infraestructura | Redundància, clima i terra tècnic | [Anar ➡️](cpd.md) |
 | **SAI / UPS** | Energia | SAI On-line vs Line-interactive | [Anar ➡️](sai.md) |
 | **ACL Linux** | Permisos de Sistema | Comandes `getfacl` i `setfacl` | [Anar ➡️](../ra3/acl.md) |
