@@ -13,7 +13,7 @@ Benvinguts al web d'apunts del mòdul. Aquí trobareu tota la informació organi
 | **RA5** | Llei de protecció de dades | 🟡 En procés |
 
 ---
-| **Jocs** | Apren jugant | [Anar al JOCS RA1 ➡️](./ra1/index_ra1.md) |🟢 Disponible |
+| **Jocs** | Apren jugant | [Anar al JOCS RA1 ➡️](jocs/index.md) |🟢 Disponible |
 ### 🚀 Últimes Actualitzacions M0226
 * **[25/09/2026]** Afegits els conceptes inicials del RA1.
 
