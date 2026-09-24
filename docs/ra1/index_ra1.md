@@ -12,7 +12,7 @@ Fes clic a qualsevol dels apartats per accedir a la documentació extensa i les 
 * Introducció a la seguretat informàtica i els principis bàsics de la protecció de la informació.
 * **Guia d'estudi:** Enfoca't en entendre la **Triada CID** (Confidencialitat, Integritat i Disponibilitat), l'autenticitat i el no-repudi, així com la diferència entre amenaça, vulnerabilitat i risc.
 
-* ### 🛡️ 2. [Seguretat Activa](activa_pasiva.md)
+### 🛡️ 2. [Seguretat Activa](activa_pasiva.md)
 * Conjunt de mesures preventives dissenyades per evitar, bloquejar o prevenir que es produeixi un atac o un incident de seguretat.
 * **Guia d'estudi:** Revisa els sistemes de protecció en temps real com tallafocs (Firewall), antivirus/EDR, xifratge de dades, autenticació multifactor (MFA) i la gestió de parches de seguretat.
 
