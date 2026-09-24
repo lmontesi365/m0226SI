@@ -25,11 +25,6 @@ La **seguretat passiva** entra en acció quan la seguretat activa ha fallat o qu
 * **Sistemes d'Alimentació Ininterrompuda (SAI / UPS):** Bateries que mantenen els equips encesos quan marxa la llum per evitar que s'apaguin bruscament.
 * **Sistemes d'extinció d'incendis:** Apaguen el foc per reduir la pèrdua d'equips físics.
 * **Pla de Recuperació de Desastres (DRP):** Document amb els passos a seguir per tornar a posar l'empresa en marxa després d'un incident greu.
-
----
-
-<Image src="image_agent_tag_21122399785327417" alt="Esquema d'infraestructura de seguretat informàtica" caption="Arquitectura de seguretat amb protecció física i lògica" />
-
 ---
 
 ## 3. Integració: Seguretat Física i Lògica
