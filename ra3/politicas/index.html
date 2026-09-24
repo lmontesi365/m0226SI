@@ -1,0 +1,1898 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../index_Ra3/">
+      
+      
+        <link rel="next" href="../certificat_digital/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Polítiques de Seguretat - M0226 - Seguretat Informàtica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#politiques-de-contrasenyes-linux-i-windows" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-header__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            M0226 - Seguretat Informàtica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Polítiques de Seguretat
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-nav__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    M0226 - Seguretat Informàtica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/index_ra1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/conceptos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptes Generals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física i Lògica
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Seguretat Física i Lògica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex F-L
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/seguretat-fisica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/seguretat-fisica-logica/seguretat-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Lògica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/SAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CPD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/index_cpd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex CPD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/ubicacio-geografica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Geogràfica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/ubicacio-edifici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Edifici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/infraestructura-tecnica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infraestructura Tècnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra1/cpd/checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/index_ra2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/raid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/copies_seguretat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Còpies de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/cripto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Criptografia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/GPG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_Ra3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polítiques de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polítiques de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parametres-clau-duna-politica-de-contrasenyes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Paràmetres Clau d'una Política de Contrasenyes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#politiques-de-contrasenyes-a-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐧 Polítiques de Contrasenyes a Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐧 Polítiques de Contrasenyes a Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gestio-de-la-caducitat-etclogindefs-i-chage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Gestió de la Caducitat (/etc/login.defs i chage)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Gestió de la Caducitat (/etc/login.defs i chage)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modificar-la-caducitat-dun-usuari-existent-amb-chage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modificar la caducitat d'un usuari existent amb chage:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-complexitat-de-les-contrasenyes-pam_pwquality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Complexitat de les Contrasenyes (pam_pwquality)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Complexitat de les Contrasenyes (pam_pwquality)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-dexemple-a-etcsecuritypwqualityconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració d'exemple a /etc/security/pwquality.conf:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bloqueig-de-comptes-per-intents-fallits-pam_faillock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bloqueig de Comptes per Intents Fallits (pam_faillock)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#politiques-de-contrasenyes-a-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪟 Polítiques de Contrasenyes a Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪟 Polítiques de Contrasenyes a Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-configuracio-des-de-la-interficie-grafica-secpolmsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Configuració des de la Interfície Gràfica (secpol.msc)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-gestio-mitjancant-powershell-i-linia-de-comandes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Gestió mitjançant PowerShell i Línia de Comandes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Gestió mitjançant PowerShell i Línia de Comandes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualitzar-i-modificar-la-politica-local-amb-net-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualitzar i modificar la política local amb net accounts:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestio-dusuaris-des-de-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestió d'usuaris des de PowerShell:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taula-comparativa-linux-vs-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Taula Comparativa: Linux vs Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-guiada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Pràctica Guiada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-comprovacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Checklist de Comprovació
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificat_digital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificat digital
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../encriptacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encriptació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antimalware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antimalware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acl/acl_windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acl/acl_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autenticacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contrasenyes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrasenyes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parametres-clau-duna-politica-de-contrasenyes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Paràmetres Clau d'una Política de Contrasenyes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#politiques-de-contrasenyes-a-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐧 Polítiques de Contrasenyes a Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐧 Polítiques de Contrasenyes a Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gestio-de-la-caducitat-etclogindefs-i-chage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Gestió de la Caducitat (/etc/login.defs i chage)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Gestió de la Caducitat (/etc/login.defs i chage)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modificar-la-caducitat-dun-usuari-existent-amb-chage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modificar la caducitat d'un usuari existent amb chage:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-complexitat-de-les-contrasenyes-pam_pwquality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Complexitat de les Contrasenyes (pam_pwquality)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Complexitat de les Contrasenyes (pam_pwquality)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-dexemple-a-etcsecuritypwqualityconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració d'exemple a /etc/security/pwquality.conf:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bloqueig-de-comptes-per-intents-fallits-pam_faillock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bloqueig de Comptes per Intents Fallits (pam_faillock)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#politiques-de-contrasenyes-a-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪟 Polítiques de Contrasenyes a Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪟 Polítiques de Contrasenyes a Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-configuracio-des-de-la-interficie-grafica-secpolmsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Configuració des de la Interfície Gràfica (secpol.msc)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-gestio-mitjancant-powershell-i-linia-de-comandes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Gestió mitjançant PowerShell i Línia de Comandes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Gestió mitjançant PowerShell i Línia de Comandes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualitzar-i-modificar-la-politica-local-amb-net-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualitzar i modificar la política local amb net accounts:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestio-dusuaris-des-de-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestió d'usuaris des de PowerShell:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taula-comparativa-linux-vs-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Taula Comparativa: Linux vs Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-guiada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Pràctica Guiada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-comprovacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Checklist de Comprovació
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="politiques-de-contrasenyes-linux-i-windows">🔒 Polítiques de Contrasenyes (Linux i Windows)</h1>
+<p>Les <strong>polítiques de contrasenyes</strong> són el primer nivell de defensa en la seguretat d'un sistema operatiu. Defineixen els requisits mínims que han de complir les credencials dels usuaris (longitud, complexitat, caducitat i historial) per dificultar els atacs de força bruta, diccionari o reutilització de claus.</p>
+<hr />
+<h2 id="parametres-clau-duna-politica-de-contrasenyes">📚 Paràmetres Clau d'una Política de Contrasenyes</h2>
+<ul>
+<li><strong>Longitud mínima:</strong> Nombre mínim de caràcters permesos (recomanat: ≥ 12-14 caràcters).</li>
+<li><strong>Complexitat:</strong> Obligatorietat de barrejar diferents tipus de caràcters (majúscules, minúscules, números i símbols).</li>
+<li><strong>Caducitat / Edat màxima:</strong> Temps límit abans que l'usuari hagi de canviar la contrasenya (ex. 90 dies).</li>
+<li><strong>Historial de contrasenyes:</strong> Nombre de claus anteriors que el sistema recorda per evitar-ne la reutilització immediata.</li>
+<li><strong>Bloqueig de compte:</strong> Nombre d'intents fallits consecutius admesos abans de inhabilitar temporals o permanentment el compte (protecció contra atacs de força bruta).</li>
+</ul>
+<hr />
+<h2 id="politiques-de-contrasenyes-a-linux">🐧 Polítiques de Contrasenyes a Linux</h2>
+<p>A Linux, la configuració de la caducitat de les claus es gestiona a <code>/etc/login.defs</code> o amb la comanda <code>chage</code>, mentre que la complexitat s'aplica mitjançant mòduls <strong>PAM</strong> (<code>pam_pwquality</code>).</p>
+<h3 id="1-gestio-de-la-caducitat-etclogindefs-i-chage">1. Gestió de la Caducitat (<code>/etc/login.defs</code> i <code>chage</code>)</h3>
+<p>Per definir valors globals per defecte per a <strong>nous usuaris</strong>, s'edita el fitxer <code>/etc/login.defs</code>:</p>
+<pre><code class="language-text">PASS_MAX_DAYS   90    # Temps màxim de validesa d'una clau (dies)
+PASS_MIN_DAYS   1     # Dies mínims abans de poder tornar a canviar la clau
+PASS_WARN_AGE   14    # Dies d'avís abans de la caducitat
+PASS_MIN_LEN    12    # Longitud mínima de la clau
+
+</code></pre>
+<h4 id="modificar-la-caducitat-dun-usuari-existent-amb-chage">Modificar la caducitat d'un usuari existent amb <code>chage</code>:</h4>
+<pre><code class="language-bash"># 1. Veure l'estat actual de la caducitat de l'usuari 'marta'
+sudo chage -l marta
+
+# 2. Assignar caducitat de 60 dies i avís de 10 dies
+sudo chage -M 60 -W 10 marta
+
+# 3. Forçar un usuari a canviar la contrasenya en el seu proper inici de sessió
+sudo chage -d 0 marta
+
+</code></pre>
+<h3 id="2-complexitat-de-les-contrasenyes-pam_pwquality">2. Complexitat de les Contrasenyes (<code>pam_pwquality</code>)</h3>
+<p>Per forçar la complexitat de les noves contrasenyes, s'utilitza el mòdul <code>pam_pwquality</code> configurant el fitxer <code>/etc/security/pwquality.conf</code>.</p>
+<h4 id="configuracio-dexemple-a-etcsecuritypwqualityconf">Configuració d'exemple a <code>/etc/security/pwquality.conf</code>:</h4>
+<pre><code class="language-text">minlen = 12        # Longitud mínima de 12 caràcters
+minclass = 3       # Mínim 3 classes de caràcters diferents (majúscules, minúscules, números, símbols)
+maxrepeat = 2      # Màxim de caràcters consecutius iguals (ex: &quot;aaa&quot; serà rebutjat)
+ucredit = -1       # Com a mínim 1 majúscula
+lcredit = -1       # Com a mínim 1 minúscula
+dcredit = -1       # Com a mínim 1 número
+ocredit = -1       # Com a mínim 1 símbol/caràcter especial
+remember = 5       # Historial: recorda les darreres 5 contrasenyes (integrat amb pam_unix)
+
+</code></pre>
+<h3 id="3-bloqueig-de-comptes-per-intents-fallits-pam_faillock">3. Bloqueig de Comptes per Intents Fallits (<code>pam_faillock</code>)</h3>
+<p>Per evitar atacs de força bruta, s'utilitza el mòdul <code>pam_faillock</code> a <code>/etc/pam.d/common-auth</code>:</p>
+<pre><code class="language-bash"># Llistar els intents fallits d'un usuari
+sudo faillock --user marta
+
+# Desbloquejar manualment un compte bloquejat
+sudo faillock --user marta --reset
+
+</code></pre>
+<hr />
+<h2 id="politiques-de-contrasenyes-a-windows">🪟 Polítiques de Contrasenyes a Windows</h2>
+<p>A Windows, les polítiques es gestionen mitjançant la <strong>Directiva de Seguretat Local</strong> (<code>secpol.msc</code>) en equips aïllats o mitjançant <strong>Directives de Grup (GPO)</strong> en un domini Active Directory (<code>gpmc.msc</code>).</p>
+<h3 id="1-configuracio-des-de-la-interficie-grafica-secpolmsc">1. Configuració des de la Interfície Gràfica (<code>secpol.msc</code>)</h3>
+<p>Ruta a la consola de seguretat local:
+<code>Directives de compte</code> &gt; <code>Directiva de contrasenyes</code></p>
+<ul>
+<li><strong>Comprovar complexitat de la contrasenya:</strong> <em>Habilitat</em> (Requereix majúscules, minúscules, números i símbols).</li>
+<li><strong>Longitud mínima de la contrasenya:</strong> Definir en 12-14 caràcters.</li>
+<li><strong>Edat màxima de la contrasenya:</strong> Definir en 60 o 90 dies.</li>
+<li><strong>Historial de contrasenyes:</strong> Recordar les últimes 5-10 contrasenyes.</li>
+</ul>
+<p>Ruta per al bloqueig de comptes:
+<code>Directives de compte</code> &gt; <code>Directiva de bloqueig de comptes</code></p>
+<ul>
+<li><strong>Umbrall de bloqueig de compte:</strong> Bloquejar després de 3 o 5 intents fallits.</li>
+<li><strong>Durada del bloqueig de compte:</strong> 15-30 minuts (o fins que l'administrador el restableixi).</li>
+</ul>
+<h3 id="2-gestio-mitjancant-powershell-i-linia-de-comandes">2. Gestió mitjançant PowerShell i Línia de Comandes</h3>
+<h4 id="visualitzar-i-modificar-la-politica-local-amb-net-accounts">Visualitzar i modificar la política local amb <code>net accounts</code>:</h4>
+<pre><code class="language-cmd">REM 1. Veure la configuració actual de la política de comptes
+net accounts
+
+REM 2. Establir una longitud mínima de 12 caràcters
+net accounts /minpwlen:12
+
+REM 3. Establir una edat màxima de 60 dies per a les contrasenyes
+net accounts /maxpwage:60
+
+REM 4. Establir un historial de 5 contrasenyes
+net accounts /UNIQUEPW:5
+
+</code></pre>
+<h4 id="gestio-dusuaris-des-de-powershell">Gestió d'usuaris des de PowerShell:</h4>
+<pre><code class="language-powershell"># 1. Obtenir l'estat d'un usuari i veure si la contrasenya caduca
+Get-LocalUser -Name &quot;Marta&quot; | Select-Object Name, PasswordExpirationDate, PasswordRequired
+
+# 2. Forçar que l'usuari hagi de canviar la contrasenya al pròxim inici de sessió
+Set-LocalUser -Name &quot;Marta&quot; -PasswordNeverExpires $false
+
+# 3. Desbloquejar un compte bloquejat per intents fallits
+Unlock-LocalUser -Name &quot;Marta&quot;
+
+</code></pre>
+<hr />
+<h2 id="taula-comparativa-linux-vs-windows">📊 Taula Comparativa: Linux vs Windows</h2>
+<table>
+<thead>
+<tr>
+<th>Paràmetre de Seguretat</th>
+<th>Linux 🐧</th>
+<th>Windows 🪟</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Caducitat i Avís</strong></td>
+<td><code>/etc/login.defs</code> / <code>chage</code></td>
+<td><code>secpol.msc</code> / <code>net accounts /maxpwage</code></td>
+</tr>
+<tr>
+<td><strong>Regles de Complexitat</strong></td>
+<td><code>/etc/security/pwquality.conf</code></td>
+<td>GPO (<code>secpol.msc</code>) / Password Policy</td>
+</tr>
+<tr>
+<td><strong>Historial de Claws</strong></td>
+<td>Mòdul <code>pam_unix</code> (<code>remember=X</code>)</td>
+<td>GPO / <code>net accounts /UNIQUEPW:X</code></td>
+</tr>
+<tr>
+<td><strong>Protecció Força Bruta</strong></td>
+<td>Mòdul <code>pam_faillock</code> / <code>faillock</code></td>
+<td>Directiva de bloqueig de comptes / <code>Unlock-LocalUser</code></td>
+</tr>
+<tr>
+<td><strong>Consola d'Auditoria</strong></td>
+<td><code>/var/log/auth.log</code> / <code>journalctl</code></td>
+<td>Visualitzador d'esdeveniments (<em>Event Viewer</em>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="practica-guiada">🧪 Pràctica Guiada</h2>
+<pre><code class="language-bash"># PRÀCTICA A LINUX: Aplicar una política de caducitat i comprovar-ne l'efecte
+
+# 1. Crear un usuari de prova
+sudo useradd -m -s /bin/bash alumne_pass
+sudo passwd alumne_pass
+
+# 2. Configurar la clau de l'usuari perquè caduqui cada 30 dies i avisi 7 dies abans
+sudo chage -M 30 -W 7 alumne_pass
+
+# 3. Comprovar que la política s'ha aplicat correctament
+sudo chage -l alumne_pass
+
+# 4. Simular la caducitat immediata de la clau
+sudo chage -d 0 alumne_pass
+
+# 5. Iniciar sessió amb l'usuari per verificar que el sistema demana canviar la clau
+su - alumne_pass
+
+</code></pre>
+<hr />
+<h2 id="checklist-de-comprovacio">✅ Checklist de Comprovació</h2>
+<ul>
+<li>[ ] Comprensió dels 5 paràmetres essencials d'una política de contrasenyes</li>
+<li>[ ] Capacitat per gestionar la caducitat i avisos a Linux amb <code>chage</code> i <code>/etc/login.defs</code></li>
+<li>[ ] Configuració de regles de complexitat amb <code>pwquality.conf</code></li>
+<li>[ ] Gestió del bloqueig de comptes locals a Windows (<code>secpol.msc</code>) i Linux (<code>pam_faillock</code>)</li>
+<li>[ ] Ús de comandes de consola (<code>net accounts</code>, PowerShell i <code>faillock</code>) per a tasques d'administració</li>
+</ul>
+<pre><code>
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
