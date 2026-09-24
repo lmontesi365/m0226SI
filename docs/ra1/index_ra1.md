@@ -28,23 +28,19 @@ Fes clic a qualsevol dels apartats per accedir a la documentació extensa i les 
 * Conjunt de mesures per protegir el maquinari i les instal·lacions contra amenaces naturals o humanes.
 * **Guia d'estudi:** Revisa els controls d'accés físic (targetes, biometria), sistemes de protecció contra incendis, climatització i control ambiental per evitar fallades en el hardware.
 
-### 💻 6. [Seguretat Lògica](seguretat-fisica-logica/seguretat-logica.md)
-* Protecció de la informació en format digital i dels programes mitjançant eines de software.
-* **Guia d'estudi:** Estudia els mecanismes de control d'accés digital, polítiques d'autenticació, xifratge de dades, utilització de tallafocs (*firewalls*) i actualitzacions del sistema.
-
-### 🏙️ 7. [Centre de Processament de Dades (CPD)](servidors.md)
+### 🏙️ 6. [Centre de Processament de Dades (CPD)](servidors.md)
 * Disseny i requisits de seguretat per a les sales de servidors corporatives.
 * **Guia d'estudi:** Aprèn les característiques principals d'un CPD: terra tècnic, cablatge estructurat, redundància de subministrament, canals de comunicació i zonificació de seguretat.
 
-### 🔋 8. [Sistemes d'Alimentació Ininterrompuda (SAI / UPS)](SAI.md)
+### 🔋 7. [Sistemes d'Alimentació Ininterrompuda (SAI / UPS)](SAI.md)
 *  Dispositius encarregats de mantenir el subministrament elèctric quan falla la xarxa principal.
 * **Guia d'estudi:** Diferencia entre els tipus de SAI (**Off-line**, **Line-interactive** i **On-line / Doble conversió**) i aprèn a calcular l'autonomia i la potència necessària (VA/Watts) per als equips.
 
-### 🐧 9. [Llistes de Control d'Accés (ACL) a Linux](../ra3/acl.md)
+### 🐧 8. [Llistes de Control d'Accés (ACL) a Linux](../ra3/acl.md)
 *  Gestió avançada de permisos POSIX sobre fitxers i directoris en entorns Linux.
 * **Guia d'estudi:** Domina les eines de consola `getfacl` i `setfacl`, la modificació de permisos per usuari/grup (`-m`), l'eliminació (`-x`/`-b`) i els permisos per defecte (`-d`).
 
-### 🪟 10. [Llistes de Control d'Accés (ACL) a Windows](../ra3/acl_windows.md)
+### 🪟 9. [Llistes de Control d'Accés (ACL) a Windows](../ra3/acl_windows.md)
 * Control d'accés detallat i permisos NTFS sobre fitxers i carpetes en entorns Windows.
 * **Guia d'estudi:** Revisa l'assignació de permisos des de la GUI (pestanya *Seguretat*), l'ús de la consola amb `icacls` (`/grant`, `/deny`, `/remove`), el concepte d'herència NTFS i la prioritat del *Deny* explícit.
 
