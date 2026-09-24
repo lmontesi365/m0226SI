@@ -20,6 +20,8 @@ A l'hora de triar un Sistema d'Alimentació Ininterrompuda, no només importa la
 <Image src="image_agent_tag_3743172430069365225" alt="Icona d'alimentació ininterrompuda SAI" caption="Equip de gestió d'alimentació elèctrica per a servidors" />
 
 ---
+![tipus de SAI](/img/sai-rack.png)
+
 
 ### 🔍 Detall de cada tecnologia
 
