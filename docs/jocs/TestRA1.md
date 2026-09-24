@@ -1,6 +1,6 @@
 ## 🛡️ Joc 3: Test d'Identificació Ràpida
 
-Avalua les següents mesures i indica a quines categories pertanyen:
+Avalua les següents mesures i indica a quines categories pertanyen:(Activa, Passiva ) / (Física, Lògica)
 
 1. **Instal·lació d'un extintor automàtic de gas al CPD:**
    * *(Respon mentalment abans d'obrir el desplegable)*
