@@ -12,9 +12,9 @@ Benvinguts al laboratori de pràctiques! Selecciona un dels reptes de la taula p
 
 | Icona / Àrea | Desafiant | Tipus de Seguretat | Enllaç d'Accés |
 |:---:|---|:---:|:---:|
-| 🏢 | **Escape Room CPD**<br>*(Accés físic, incendis, SAI)* | Física (Activa/Passiva) | [👉 Anar al Joc 1](#-joc-1-escape-room-del-cpd) |
-| 💻 | **Atac a la Xarxa**<br>*(Ransomware, Malware, USB)* | Lògica (Activa/Passiva) | [👉 Anar al Joc 2](#-joc-2-incidents-de-xarxa-i-programari) |
-| 🛡️ | **Test de Classificació**<br>*(10 preguntes ràpides)* | Totes les àrees | [👉 Anar al Test](#-joc-3-test-didentificacio-rapida) |
+| 🏢 | **Escape Room CPD**<br>*(Accés físic, incendis, SAI)* | Física (Activa/Passiva) | [👉 Anar al Joc 1](#Joc1_RA1.md) |
+| 💻 | **Atac a la Xarxa**<br>*(Ransomware, Malware, USB)* | Lògica (Activa/Passiva) | [👉 Anar al Joc 2](#Joc2_RA1.md) |
+| 🛡️ | **Test de Classificació**<br>*(10 preguntes ràpides)* | Totes les àrees | [👉 Anar al Test](#Test_RA1-md) |
 
 ---
 
