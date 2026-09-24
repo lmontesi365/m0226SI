@@ -142,9 +142,12 @@ Conjunt de mesures i controls encaminats a protegir els equips, dispositius i in
 
 ## 🎯 Objectius de Seguretat Física
 
-✅ **Disponibilitat:** Els sistemes estan sempre operatius
+✅ **Disponibilitat:** Els sistemes estan sempre operatius 
+
 ✅ **Integritat:** Els equipaments no són danyats o sabotejats
+
 ✅ **Confidencialitat:** Nomes personal autoritzat accedeix
+
 ✅ **Resiliència:** El centre pot operar malgrat fallos
 
 ---
