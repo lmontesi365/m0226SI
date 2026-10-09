@@ -18,6 +18,9 @@ nav:
           - Ubicació Edifici: ra1/cpd/ubicacio-edifici.md
           - Infraestructura Tècnica: ra1/cpd/infraestructura-tecnica.md
           - Checklist: ra1/cpd/checklist.md
+        ACL's:
+         - ACL Windows: ra3/acl/acl_windows.md
+         - ACL Linux: ra1/acl/acl_linux.md
   - RA2:
       - index RA2: ra2/index_ra2.md
       - Raid: ra2/raid.md
