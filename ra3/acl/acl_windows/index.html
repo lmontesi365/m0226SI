@@ -1,0 +1,1822 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../antimalware/">
+      
+      
+        <link rel="next" href="../acl_linux/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>ACL Windows - M0226 - Seguretat Informàtica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#llistes-de-control-dacces-acl-a-windows-permisos-ntfs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="M0226 - Seguretat Informàtica" class="md-header__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            M0226 - Seguretat Informàtica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ACL Windows
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="M0226 - Seguretat Informàtica" class="md-nav__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    M0226 - Seguretat Informàtica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra1/index_ra1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra1/conceptos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptes Generals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física i Lògica
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Seguretat Física i Lògica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra1/seguretat-fisica-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex F-L
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra1/seguretat-fisica-logica/seguretat-fisica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra1/seguretat-fisica-logica/seguretat-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Lògica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra1/SAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CPD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra1/cpd/index_cpd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex CPD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra1/cpd/ubicacio-geografica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Geogràfica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra1/cpd/ubicacio-edifici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Edifici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra1/cpd/infraestructura-tecnica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infraestructura Tècnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra1/cpd/checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra2/index_ra2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra2/raid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra2/copies_seguretat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Còpies de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra2/cripto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Criptografia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ra2/GPG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index_Ra3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polítiques de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../certificat_digital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificat digital
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../encriptacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encriptació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../antimalware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antimalware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Windows
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptes-clau-de-les-acl-a-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Conceptes Clau de les ACL a Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-principals-de-fitxers-i-carpetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Permisos Principals de Fitxers i Carpetes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestio-dacls-a-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪟 Gestió d'ACLs a Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪟 Gestió d&#39;ACLs a Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gestio-des-de-la-interficie-grafica-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Gestió des de la Interfície Gràfica (GUI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-gestio-per-linia-de-comandes-amb-icacls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Gestió per Línia de Comandes amb icacls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Gestió per Línia de Comandes amb icacls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-consultar-permisos-dun-fitxer-o-carpeta-getfacl-equivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Consultar permisos d'un fitxer o carpeta (getfacl equivalent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-assignar-o-modificar-permisos-setfacl-m-equivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Assignar o modificar permisos (setfacl -m equivalent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-eliminar-un-permis-especific-setfacl-x-equivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Eliminar un permís específic (setfacl -x equivalent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-desactivar-o-activar-lherencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Desactivar o Activar l'Herència
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gestio-dacls-amb-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Gestió d'ACLs amb PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taula-comparativa-dacl-linux-vs-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Taula Comparativa d'ACL: Linux vs Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-guiada-per-a-lalumnat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Pràctica Guiada per a l'Alumnat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-comprovacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Checklist de Comprovació
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acl_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autenticacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contrasenyes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrasenyes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptes-clau-de-les-acl-a-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Conceptes Clau de les ACL a Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-principals-de-fitxers-i-carpetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Permisos Principals de Fitxers i Carpetes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestio-dacls-a-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪟 Gestió d'ACLs a Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪟 Gestió d&#39;ACLs a Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gestio-des-de-la-interficie-grafica-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Gestió des de la Interfície Gràfica (GUI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-gestio-per-linia-de-comandes-amb-icacls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Gestió per Línia de Comandes amb icacls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Gestió per Línia de Comandes amb icacls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-consultar-permisos-dun-fitxer-o-carpeta-getfacl-equivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Consultar permisos d'un fitxer o carpeta (getfacl equivalent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-assignar-o-modificar-permisos-setfacl-m-equivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Assignar o modificar permisos (setfacl -m equivalent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-eliminar-un-permis-especific-setfacl-x-equivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Eliminar un permís específic (setfacl -x equivalent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-desactivar-o-activar-lherencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Desactivar o Activar l'Herència
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gestio-dacls-amb-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Gestió d'ACLs amb PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taula-comparativa-dacl-linux-vs-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Taula Comparativa d'ACL: Linux vs Windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-guiada-per-a-lalumnat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Pràctica Guiada per a l'Alumnat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-comprovacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Checklist de Comprovació
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="llistes-de-control-dacces-acl-a-windows-permisos-ntfs">🔐 Llistes de Control d'Accés (ACL) a Windows (Permisos NTFS)</h1>
+<p>A <strong>Windows</strong>, el control d'accés detallat a nivell de sistema de fitxers s'implementa mitjançant els <strong>permisos NTFS</strong>. De la mateixa manera que les ACL a Linux, els permisos NTFS permeten definir amb precisió quins usuaris o grups poden llegir, modificar, crear o eliminar fitxers i carpetes.</p>
+<hr />
+<h2 id="conceptes-clau-de-les-acl-a-windows">📚 Conceptes Clau de les ACL a Windows</h2>
+<ul>
+<li><strong>DACL (<em>Discretionary Access Control List</em>):</strong> Llista associada a cada objecte (fitxer/carpeta) que especifica quins usuaris o grups tenen permís o denegació d'accés.</li>
+<li><strong>ACE (<em>Access Control Entry</em>):</strong> Cada una de les entrades individuals dins d'una DACL (ex: <code>Marta: Permís de Modificació - Permetre</code>).</li>
+<li><strong>Permisos d'Herència (<em>Inheritance</em>):</strong> Per defecte, els fitxers i subcarpetes hereten automàticament els permisos de la carpeta pare on estan continguts.</li>
+<li><strong>Denegació explícita (<em>Explicit Deny</em>):</strong> Si un permís es configura explícitament com a <strong>Denegar (<em>Deny</em>)</strong>, té prioritat absoluta sobre qualsevol permís de <strong>Permetre (<em>Allow</em>)</strong>.</li>
+</ul>
+<hr />
+<h2 id="permisos-principals-de-fitxers-i-carpetes">🛠️ Permisos Principals de Fitxers i Carpetes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Permís NTFS</th>
+<th style="text-align: left;">Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Control Total (<em>Full Control</em>)</strong></td>
+<td style="text-align: left;">Permet fer qualsevol acció, incloent canviar permisos i prendre la propietat de l'objecte.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Modificar (<em>Modify</em>)</strong></td>
+<td style="text-align: left;">Permet llegir, escriure, executar i eliminar el fitxer o carpeta.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lectura i execució (<em>Read &amp; Execute</em>)</strong></td>
+<td style="text-align: left;">Permet veure el contingut i executar fitxers (ex: <code>.exe</code>, <code>.bat</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Llistar contingut de la carpeta (<em>List Folder Contents</em>)</strong></td>
+<td style="text-align: left;">Permet veure els noms de fitxers i subcarpetes (exclusiu de carpetes).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lectura (<em>Read</em>)</strong></td>
+<td style="text-align: left;">Permet obrir i veure el contingut del fitxer o carpeta.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Escriptura (<em>Write</em>)</strong></td>
+<td style="text-align: left;">Permet crear nous fitxers/carpetes i escriure canvis.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="gestio-dacls-a-windows">🪟 Gestió d'ACLs a Windows</h2>
+<h3 id="1-gestio-des-de-la-interficie-grafica-gui">1. Gestió des de la Interfície Gràfica (GUI)</h3>
+<ol>
+<li>Fes botó dret sobre el fitxer o carpeta &gt; <strong>Propietats</strong>.</li>
+<li>Selecciona la pestanya <strong>Seguretat</strong>.</li>
+<li>Prem <strong>Editar...</strong> per afegir/eliminar usuaris o modificar permisos admesos (<code>Allow</code> / <code>Deny</code>).</li>
+<li>Per gestionar l'herència: Prem <strong>Opcions avançades</strong> &gt; <strong>Deshabilitar l'herència</strong> (<em>Disable inheritance</em>).</li>
+</ol>
+<hr />
+<h3 id="2-gestio-per-linia-de-comandes-amb-icacls">2. Gestió per Línia de Comandes amb <code>icacls</code></h3>
+<p><code>icacls</code> és l'eina de línia de comandes nativa de Windows equivalent a <code>getfacl</code> i <code>setfacl</code> de Linux.</p>
+<h4 id="a-consultar-permisos-dun-fitxer-o-carpeta-getfacl-equivalent">A. Consultar permisos d'un fitxer o carpeta (<code>getfacl</code> equivalent)</h4>
+<pre><code class="language-cmd">REM Consultar permisos d'una carpeta
+icacls C:\Dades\Projectes
+
+</code></pre>
+<h4 id="b-assignar-o-modificar-permisos-setfacl-m-equivalent">B. Assignar o modificar permisos (<code>setfacl -m</code> equivalent)</h4>
+<p>Sintaxi dels permisos a <code>icacls</code>: <code>(F)</code> Control Total, <code>(M)</code> Modificació, <code>(RX)</code> Lectura/Execució, <code>(R)</code> Lectura, <code>(W)</code> Escriptura.</p>
+<pre><code class="language-cmd">REM Donar permís de modificació a l'usuari 'Marta' sobre un fitxer
+icacls C:\Dades\informe.docx /grant Marta:(M)
+
+REM Donar permís de només lectura al grup 'Alumnes' a tota una carpeta i el seu contingut (recursia)
+icacls C:\Dades\Compartit /grant Alumnes:(RX) /t
+
+REM Denegar permís d'escriptura a l'usuari 'Joan'
+icacls C:\Dades\informe.docx /deny Joan:(W)
+
+</code></pre>
+<h4 id="c-eliminar-un-permis-especific-setfacl-x-equivalent">C. Eliminar un permís específic (<code>setfacl -x</code> equivalent)</h4>
+<pre><code class="language-cmd">REM Eliminar l'entrada d'accés (ACE) de l'usuari 'Marta'
+icacls C:\Dades\informe.docx /remove Marta
+
+</code></pre>
+<h4 id="d-desactivar-o-activar-lherencia">D. Desactivar o Activar l'Herència</h4>
+<pre><code class="language-cmd">REM Desactivar herència i copiar els permisos heretats com a permisos explícits
+icacls C:\Dades\Privat /inheritance:d
+
+REM Restaurar l'herència de la carpeta pare
+icacls C:\Dades\Privat /inheritance:e
+
+</code></pre>
+<hr />
+<h3 id="3-gestio-dacls-amb-powershell">3. Gestió d'ACLs amb PowerShell</h3>
+<p>PowerShell ofereix els cmdlets <code>Get-Acl</code> i <code>Set-Acl</code> per a una gestió automatitzada.</p>
+<pre><code class="language-powershell"># 1. Veure els permisos ACL d'un fitxer
+Get-Acl -Path &quot;C:\Dades\informe.docx&quot; | Format-List
+
+# 2. Afegir una nova regla d'accés a una carpeta
+$Ruta = &quot;C:\Dades\Projectes&quot;
+$ACL = Get-Acl -Path $Ruta$Regla = New-Object System.Security.AccessControl.FileSystemAccessRule(&quot;Marta&quot;, &quot;Modify&quot;, &quot;ContainerInherit, ObjectInherit&quot;, &quot;None&quot;, &quot;Allow&quot;)
+$ACL.AddAccessRule($Regla)
+Set-Acl -Path $Ruta -AclObject$ACL
+
+</code></pre>
+<hr />
+<h2 id="taula-comparativa-dacl-linux-vs-windows">📊 Taula Comparativa d'ACL: Linux vs Windows</h2>
+<table>
+<thead>
+<tr>
+<th>Operació</th>
+<th>Linux 🐧</th>
+<th>Windows 🪟</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Comanda per consultar ACLs</strong></td>
+<td><code>getfacl fitxer</code></td>
+<td><code>icacls fitxer</code> / <code>Get-Acl</code></td>
+</tr>
+<tr>
+<td><strong>Comanda per modificar ACLs</strong></td>
+<td><code>setfacl -m u:usuari:rwx fitxer</code></td>
+<td><code>icacls fitxer /grant usuari:(M)</code></td>
+</tr>
+<tr>
+<td><strong>Comanda per eliminar una ACL</strong></td>
+<td><code>setfacl -x u:usuari fitxer</code></td>
+<td><code>icacls fitxer /remove usuari</code></td>
+</tr>
+<tr>
+<td><strong>Eliminar totes les ACLs</strong></td>
+<td><code>setfacl -b fitxer</code></td>
+<td><code>icacls fitxer /reset</code></td>
+</tr>
+<tr>
+<td><strong>Prioritat de denegació</strong></td>
+<td>No existeix <em>Deny</em> explícit (s'eliminen permisos)</td>
+<td><strong>Deny explícit</strong> s'imposa a qualsevol <em>Allow</em></td>
+</tr>
+<tr>
+<td><strong>Herència en carpetes</strong></td>
+<td>ACLs per defecte (<code>setfacl -d</code>)</td>
+<td>Herència automàtica NTFS (modificable)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="practica-guiada-per-a-lalumnat">🧪 Pràctica Guiada per a l'Alumnat</h2>
+<pre><code class="language-cmd">REM 1. Crear directori de prova i fitxer
+mkdir C:\PracACL
+echo &quot;Fitxer de prova&quot; &gt; C:\PracACL\document.txt
+
+REM 2. Consultar els permisos inicials heretats
+icacls C:\PracACL\document.txt
+
+REM 3. Desactivar herència a la carpeta de treball
+icacls C:\PracACL /inheritance:d
+
+REM 4. Otorgar permisos de Modificació a un usuari local de prova (ex: UsuariTest)
+icacls C:\PracACL\document.txt /grant UsuariTest:(M)
+
+REM 5. Comprovar que els permisos s'han aplicat correctament
+icacls C:\PracACL\document.txt
+
+</code></pre>
+<hr />
+<h2 id="checklist-de-comprovacio">✅ Checklist de Comprovació</h2>
+<ul>
+<li>[ ] Comprensió del concepte de DACL, ACE i el paper de la Denegació explícita</li>
+<li>[ ] Capacitat per veure i modificar permisos des de la pestanya <strong>Seguretat</strong> a la GUI</li>
+<li>[ ] Ús de la comanda <code>icacls</code> per atorgar (<code>/grant</code>), denegar (<code>/deny</code>) i eliminar (<code>/remove</code>) permisos</li>
+<li>[ ] Domini del concepte d'herència NTFS i com activar-la/desactivar-la (<code>/inheritance</code>)</li>
+<li>[ ] Conneixement de l'ús bàsic de <code>Get-Acl</code> i <code>Set-Acl</code> en PowerShell</li>
+</ul>
+<p>```</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

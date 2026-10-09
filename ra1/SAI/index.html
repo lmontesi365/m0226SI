@@ -1,0 +1,1678 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../seguretat-fisica-logica/seguretat-logica/">
+      
+      
+        <link rel="next" href="../cpd/index_cpd/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>SAI - M0226 - Seguretat Informàtica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sistema-dalimentacio-ininterrompuda-sai-ups" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-header__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            M0226 - Seguretat Informàtica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SAI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="M0226 - Seguretat Informàtica" class="md-nav__button md-logo" aria-label="M0226 - Seguretat Informàtica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    M0226 - Seguretat Informàtica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_ra1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conceptos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptes Generals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física i Lògica
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Seguretat Física i Lògica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seguretat-fisica-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex F-L
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seguretat-fisica-logica/seguretat-fisica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seguretat-fisica-logica/seguretat-logica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguretat Lògica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-sai-i-per-a-que-servei" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Què és un SAI i per a què servei?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Què és un SAI i per a què servei?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcions-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcions principals:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#com-es-calcula-la-potencia-necessaria-dun-sai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧮 Com es calcula la potència necessària d'un SAI?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧮 Com es calcula la potència necessària d&#39;un SAI?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula-fonamental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fórmula fonamental:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-practics-de-calcul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Exemples Pràctics de Càlcul
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Exemples Pràctics de Càlcul">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1-sai-en-format-torre-puesto-de-treball-petit-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏢 Exemple 1: SAI en format Torre (Puesto de treball / Petit servidor)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Exemple 1: SAI en format Torre (Puesto de treball / Petit servidor)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passos-del-calcul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos del càlcul:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-2-sai-en-format-rack-armari-cpd-servidors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗄️ Exemple 2: SAI en format Rack (Armari CPD / Servidors)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗄️ Exemple 2: SAI en format Rack (Armari CPD / Servidors)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passos-del-calcul_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos del càlcul:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CPD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpd/index_cpd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índex CPD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpd/ubicacio-geografica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Geogràfica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpd/ubicacio-edifici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicació Edifici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpd/infraestructura-tecnica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infraestructura Tècnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpd/checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/index_ra2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/raid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/copies_seguretat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Còpies de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/cripto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Criptografia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra2/GPG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/index_Ra3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index RA3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/politicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polítiques de Seguretat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/certificat_digital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificat digital
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/encriptacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encriptació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/antimalware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antimalware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/acl/acl_windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/acl/acl_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACL Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/autenticacio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticació
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ra3/contrasenyes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrasenyes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-sai-i-per-a-que-servei" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Què és un SAI i per a què servei?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Què és un SAI i per a què servei?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcions-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcions principals:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#com-es-calcula-la-potencia-necessaria-dun-sai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧮 Com es calcula la potència necessària d'un SAI?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧮 Com es calcula la potència necessària d&#39;un SAI?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula-fonamental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fórmula fonamental:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-practics-de-calcul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Exemples Pràctics de Càlcul
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Exemples Pràctics de Càlcul">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1-sai-en-format-torre-puesto-de-treball-petit-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏢 Exemple 1: SAI en format Torre (Puesto de treball / Petit servidor)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Exemple 1: SAI en format Torre (Puesto de treball / Petit servidor)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passos-del-calcul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos del càlcul:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-2-sai-en-format-rack-armari-cpd-servidors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗄️ Exemple 2: SAI en format Rack (Armari CPD / Servidors)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗄️ Exemple 2: SAI en format Rack (Armari CPD / Servidors)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passos-del-calcul_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos del càlcul:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sistema-dalimentacio-ininterrompuda-sai-ups">🔋 Sistema d'Alimentació Ininterrompuda (SAI / UPS)</h1>
+<h2 id="que-es-un-sai-i-per-a-que-servei">📌 Què és un SAI i per a què servei?</h2>
+<p>Un <strong>SAI</strong> (<em>Sistema d'Alimentació Ininterrompuda</em>), en anglès <strong>UPS</strong> (<em>Uninterruptible Power Supply</em>), és un dispositiu de <strong>seguretat passiva física</strong> que es connecta entre la xarxa elèctrica i els equips informàtics. Conté bateries internes capaços de subministrar energia de forma immediata quan falla el corrent principal.</p>
+<h3 id="funcions-principals">Funcions principals:</h3>
+<ol>
+<li><strong>Evitar l'apagat brusc:</strong> Manté els equips funcionant durant un tall de llum perquè els usuaris o sistemes puguin desar la feina i tancar de forma segura.</li>
+<li><strong>Filtratge del senyal elèctric:</strong> Protegeix el maquinari contra picos de tensió, sobretensions, microtallats i soroll elèctric que podrien fer malbé les fonts d'alimentació.</li>
+<li><strong>Mantenir la continuïtat del servei:</strong> En entorns de servidors (CPD), dona temps a que s'engeguin els grups electrògens (generadors de dièsel) sense que els servidors es reiniciïn.</li>
+</ol>
+<hr />
+<h2 id="com-es-calcula-la-potencia-necessaria-dun-sai">🧮 Com es calcula la potència necessària d'un SAI?</h2>
+<p>Per triar el SAI adequat cal calcular la <strong>potència aparent</strong>, expressada en <strong>Volt-Ampères (VA)</strong>.</p>
+<h3 id="formula-fonamental">Fórmula fonamental:</h3>
+<p>$$\text{Potència Aparent (VA)} = \frac{\text{Potència Real (Wats)}}{\text{Factor de Potència (FP)}}$$</p>
+<ul>
+<li><strong>Potència Real (W):</strong> La suma del consum elèctric de tots els dispositius que connectarem al SAI.</li>
+<li><strong>Factor de Potència (FP):</strong> Eficiència del SAI. Sol variar entre <strong>0.7</strong> (SAIs bàsics) i <strong>0.9 - 1.0</strong> (SAIs professionals d'alta eficiència).</li>
+<li><strong>Marge de seguretat:</strong> Es recomana <strong>afegir un 20% - 30% addicional</strong> a la potència obtinguda per evitar que el SAI funcioni al 100% de la seva capacitat i permetre futures ampliacions.</li>
+</ul>
+<hr />
+<p><Carousel>
+  <Image src="image_agent_tag_16571883388794755307" alt="SAI en format torre" caption="SAI tipus torre per a llocs de treball o petits servidors" />
+  <Image src="image_agent_tag_16571883388794755880" alt="SAI en format Rack 19 polzades" caption="SAI tipus Rack per instal·lar en armaris de servidors CPD" />
+</Carousel></p>
+<hr />
+<h2 id="exemples-practics-de-calcul">📝 Exemples Pràctics de Càlcul</h2>
+<h3 id="exemple-1-sai-en-format-torre-puesto-de-treball-petit-servidor">🏢 Exemple 1: SAI en format Torre (Puesto de treball / Petit servidor)</h3>
+<p><strong>Escenari:</strong> Volem protegir un servidor de fitxers en format torre i el seu encaminador (router) en una petita oficina.</p>
+<ul>
+<li><strong>Dispositius a connectar:</strong></li>
+<li>1 Servidor Torre: <strong>350 W</strong></li>
+<li>1 Router / Switch: <strong>30 W</strong></li>
+<li>1 Monitor LED: <strong>20 W</strong></li>
+<li><strong>Dades tècniques del SAI:</strong> Factor de potència ($\text{FP}$) = <strong>0.7</strong></li>
+</ul>
+<h4 id="passos-del-calcul">Passos del càlcul:</h4>
+<ol>
+<li>
+<p><strong>Calcular la potència total en Wats:</strong>
+   $$\text{Wats totals} = 350\text{ W} + 30\text{ W} + 20\text{ W} = 400\text{ W}$$</p>
+</li>
+<li>
+<p><strong>Convertir Wats a Volt-Ampères (VA):</strong>
+   $$\text{VA teòrics} = \frac{400\text{ W}}{0.7} \approx 571.43\text{ VA}$$</p>
+</li>
+<li>
+<p><strong>Aplicar el marge de seguretat del 25% ($\times 1.25$):</strong>
+   $$\text{VA recomanats} = 571.43 \times 1.25 = 714.28\text{ VA}$$</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Elecció comercial:</strong> Es triarà un SAI en format Torre d'almenys <strong>800 VA</strong> o <strong>1000 VA</strong> per garantir una bona autonomia.</p>
+</blockquote>
+<hr />
+<h3 id="exemple-2-sai-en-format-rack-armari-cpd-servidors">🗄️ Exemple 2: SAI en format Rack (Armari CPD / Servidors)</h3>
+<p><strong>Escenari:</strong> Protecció d'un armari Rack de 19 polzades en un CPD que conté diversos servidors de processament.</p>
+<ul>
+<li><strong>Dispositius a connectar:</strong></li>
+<li>2 Servidors Rack 2U: $2 \times 500\text{ W} = 1000\text{ W}$</li>
+<li>1 Switch d'alta velocitat (PoE): <strong>150 W</strong></li>
+<li>1 Sistema d'emmagatzematge NAS: <strong>250 W</strong></li>
+<li><strong>Dades tècniques del SAI:</strong> Format Rack 2U amb Factor de potència ($\text{FP}$) = <strong>0.9</strong> (Línia On-Line)</li>
+</ul>
+<h4 id="passos-del-calcul_1">Passos del càlcul:</h4>
+<ol>
+<li>
+<p><strong>Calcular la potència total en Wats:</strong>
+   $$\text{Wats totals} = 1000\text{ W} + 150\text{ W} + 250\text{ W} = 1400\text{ W}$$</p>
+</li>
+<li>
+<p><strong>Convertir Wats a Volt-Ampères (VA):</strong>
+   $$\text{VA teòrics} = \frac{1400\text{ W}}{0.9} \approx 1555.55\text{ VA}$$</p>
+</li>
+<li>
+<p><strong>Aplicar el marge de seguretat del 30% ($\times 1.30$):</strong>
+   $$\text{VA recomanats} = 1555.55 \times 1.30 = 2022.21\text{ VA}$$</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Elecció comercial:</strong> Es triarà un SAI de format <strong>Rack 19" (ex. 2U o 3U)</strong> d'almenys <strong>2200 VA</strong> o <strong>3000 VA</strong> (<em>On-Line Double Conversion</em>).</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
