@@ -36,7 +36,7 @@ Fes clic a qualsevol dels apartats per accedir a la documentació extensa i les 
 *  Dispositius encarregats de mantenir el subministrament elèctric quan falla la xarxa principal.
 * **Guia d'estudi:** Diferencia entre els tipus de SAI (**Off-line**, **Line-interactive** i **On-line / Doble conversió**) i aprèn a calcular l'autonomia i la potència necessària (VA/Watts) per als equips.
 
-### 🐧 8. [Llistes de Control d'Accés (ACL) a Linux](../ra3/acl.md)
+### 🐧 8. [Llistes de Control d'Accés (ACL) a Linux](../acl/acl_linux.md)
 *  Gestió avançada de permisos POSIX sobre fitxers i directoris en entorns Linux.
 * **Guia d'estudi:** Domina les eines de consola `getfacl` i `setfacl`, la modificació de permisos per usuari/grup (`-m`), l'eliminació (`-x`/`-b`) i els permisos per defecte (`-d`).
 
